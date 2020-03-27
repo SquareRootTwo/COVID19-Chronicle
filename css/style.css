@@ -1,0 +1,84 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+.map {
+  width: 100vw;
+  height: 100vh; }
+
+.controls {
+  position: fixed;
+  height: 30px;
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center; }
+
+.button, .play , .next, .prev {
+  display: inline-block;
+  font-weight: 400;
+  color: #c7c7c7;
+  text-align: center;
+  vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  .button:hover, .play :hover, .next:hover, .prev:hover {
+    color: #4d669c;
+    text-decoration: none; }
+  .button:focus, .play :focus, .next:focus, .prev:focus {
+    box-shadow: 0 0 0 0.2rem #2d3c5c; }
+  .button:disabled, .play :disabled, .next:disabled, .prev:disabled {
+    opacity: 0.65; }
+  .button:disabled, .play :disabled, .next:disabled, .prev:disabled {
+    pointer-events: none; }
+
+.play  {
+  font-size: 3rem; }
+
+.next {
+  font-size: 3rem; }
+
+.prev {
+  font-size: 3rem; }
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #c7c7c7;
+  text-align: center;
+  vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  .btn:hover {
+    color: #4d669c;
+    text-decoration: none; }
+  .btn:focus {
+    box-shadow: 0 0 0 0.2rem #2d3c5c; }
+  .btn:disabled {
+    opacity: 0.65; }
+  .btn:disabled {
+    pointer-events: none; }
+
+/*# sourceMappingURL=style.css.map */

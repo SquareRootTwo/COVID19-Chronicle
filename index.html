@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style src="css/style.css"></style>
+
+    <title>COVID19-Chronicle</title>
+  </head>
+  <body>
+    <canvas class="map"></canvas>
+
+    <div class="score">
+      
+    </div>
+
+    <div class="controls">
+      <a class="play" id="">
+        <i class="fas fa-play-circle"></i>
+      </a>
+      <a class="prev" id="">
+        <i class="fas fa-chevron-circle-left"></i>
+      </a>
+      <a class="next" id="">
+        <i class="fas fa-chevron-circle-right"></i>
+      </a>
+      <div class="timeline">
+        <form class="slidebar" action="/action_page.php">
+          <label for="vol">Date</label>
+          <input type="range" id="vol" name="vol" min="0" max="100">
+        </form>
+      </div>
+      <a class="settings">
+        
+      </a>
+
+    </div>
+
+  </body>
+</html>

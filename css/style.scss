@@ -1,0 +1,143 @@
+// —————————————————————————   Import   ————————————————————————— //
+
+@import 'variables';
+
+
+// —————————————————————————   Main   ————————————————————————— //
+
+html, body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+// —————————————————————————   Map   ————————————————————————— //
+
+.map {
+  width: 100vw;
+  height: 100vh;
+}
+
+// —————————————————————————   Score   ————————————————————————— //
+
+.score {
+
+}
+
+
+// —————————————————————————   Controls   ————————————————————————— //
+
+.controls {
+  position: fixed;
+  height: 30px;
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 400;
+  color: $light-grey-color;
+  text-align: center;
+  vertical-align: middle;
+  outline: 0;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    color: $middle-blue-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem $dark-blue-color;
+  }
+
+  &:disabled {
+    opacity: 0.65;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+.play {
+  @extend .button;
+  font-size: 3rem;
+  
+}
+
+.next {
+  @extend .button;
+  font-size: 3rem;
+  
+}
+
+.prev {
+  @extend .button;
+  font-size: 3rem;
+
+}
+
+.timeline {
+
+}
+
+.settings {
+
+}
+
+// —————————————————————————   Button   ————————————————————————— //
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: $light-grey-color;
+  text-align: center;
+  vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    color: $middle-blue-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem $dark-blue-color;
+  }
+
+  &:disabled {
+    opacity: 0.65;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
