@@ -1,6 +1,8 @@
 var mapData = d3.map();
 
 const STORK_COLOR = "#A3A3A3";
+const STORK_COLOR_HOVER = "#000000";
+const STORK_COLOR_ACTIVE = "#ee8572";
 
 const getColor = (cases) => {
     if (cases > 10000) {
@@ -64,6 +66,15 @@ let svg = d3.selectAll('.map')
         .attr('height',height)
         .call(zoom);
 
+let popUpOpen = function(d) {
+    d3.select("countryInfo")
+        .append('div')
+        .attr()
+        .innerText
+
+    }
+
+
 function initMap() {
     console.log("initmap");
     d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
@@ -126,7 +137,7 @@ function redraw() {
         slast = scale;
         tlast = t;
     }
-    
+
     svg.selectAll('path')       // re-project path data
-        .attr('d', path);
+        .attr('d', path)
 }

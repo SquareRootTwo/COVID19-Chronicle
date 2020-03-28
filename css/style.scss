@@ -37,17 +37,25 @@ body {
 
 .country {
   cursor: pointer;
-  z-index: 10;
-  
+  opacity: 0.9;
+
   &:hover {
-    z-index: 1;
     stroke: black !important;
+    stroke-width: 2px !important;
   }
   
-  &:active, &:focus {
-    z-index: 1;
-    fill: green !important;
+  &:active {
+    stroke: green !important;
+    stroke-width: 2px !important;
   }
+}
+
+.popUp {
+
+}
+
+.countryActive {
+  fill: #000000 !important;
 }
 
 // —————————————————————————   Score   ————————————————————————— //
@@ -212,10 +220,20 @@ body {
 }
 
 .controlLeft {
+  height: 6rem;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 10px;
 }
 
 .controlRight {
+  height: 6rem;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 10px;
 }
 
@@ -250,6 +268,26 @@ body {
 .settings {
   @extend .button;
   font-size: 3rem;
+}
+
+.dateContainer {
+  width: 47px;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  position: relative !important;
+  bottom: 2px !important;
+  right: 2px !important;
+  padding: 0px;
+  margin: 0px;
+  width: 46px;
+  height: 46px;
+  background-color: $BUTTON_COLOR;
+  border-radius: 1.5rem;
 }
 
 // —————————————————————————   Controls   ————————————————————————— //
