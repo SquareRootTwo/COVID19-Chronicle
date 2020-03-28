@@ -36,16 +36,23 @@ body {
 
 // —————————————————————————   Score   ————————————————————————— //
 
-.score {
+.header {
   position: fixed;
   display: flex;
   justify-content: center;
+  width: 100vw;
+  height: 10vh;
+  top: 30px;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 
-  top: 30px;
   height: 10vh;
-  width: 100vw;
+  width: minmax(30vw, 100px);
 
   overflow-x: hidden;
   overflow-y: hidden;
@@ -74,7 +81,7 @@ body {
   position: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: nowrap;
 
   background-color: $light-background-color;
@@ -82,11 +89,12 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 
+  margin: 0px;
+  padding: 0px;
   right: 0px;
   top: 10%;
   height: 60vh;
   width: 15rem;
-  padding: 1rem;
 
   border-left: 1px solid $light-grey-color;
   border-top: 1px solid $light-grey-color;
@@ -95,7 +103,7 @@ body {
   border-radius: 25px 0px 0px 25px;
 
   &.toggled {
-    right: -14rem;
+    right: -13rem;
   }
 
   @media only screen and (max-width: 768px) { 
@@ -119,11 +127,12 @@ body {
     border-left: 1px solid $light-grey-color;
     border-right: 1px solid $light-grey-color;
     border-bottom: 1px solid $light-grey-color;
+    border-top: none;
   
     border-radius: 0px 0px 25px 25px;
   
     &.toggled {
-      top: -13.5rem;
+      top: -13rem;
     }
   }
 }
@@ -169,13 +178,26 @@ body {
 //   }
 // }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu {
   padding: 5px;
 }
 
 .content {
-  margin-left: 15px;
-  
+  overflow: hidden;
+  width: 11rem;
+  padding: 15px;
+  @media only screen and (max-width: 768px) { 
+    width: auto;
+    padding: 15px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+  }
 }
 
 // —————————————————————————   Controls   ————————————————————————— //
@@ -194,7 +216,6 @@ body {
 
 .button {
   display: inline-block;
-  font-weight: 400;
   color: $light-grey-color;
   text-align: center;
   vertical-align: middle;
