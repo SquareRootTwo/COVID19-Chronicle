@@ -86,7 +86,7 @@ function refreshCountries() {
     csvData.forEach(function(entry) {
         mapData.set(entry.id, entry[currentDay+'_i']);
     });
-    svg.selectAll("path")
+    svg.selectAll("path").transition()
         .style("fill", function (d){
             let total = mapData.get(d.id) || 0;
             return getColor(total);
