@@ -140,7 +140,7 @@ body {
     flex-wrap: nowrap;
   
     left: 20vw;
-    top: 2rem;
+    top: 20vh;
     height: 15rem;
     width: 60vw;
   
@@ -271,7 +271,7 @@ body {
 }
 
 .dateContainer {
-  width: 47px;
+  width: 100px;
   height: 66px;
   display: flex;
   justify-content: center;
@@ -284,7 +284,7 @@ body {
   right: 2px !important;
   padding: 0px;
   margin: 0px;
-  width: 46px;
+  width: 100px;
   height: 46px;
   background-color: $BUTTON_COLOR;
   border-radius: 1.5rem;
