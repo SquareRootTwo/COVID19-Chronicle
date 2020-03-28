@@ -66,10 +66,10 @@ body {
 // —————————————————————————   Info   ————————————————————————— //
 
 .info {
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
+  -webkit-transition: right .25s ease-out;
+  -moz-transition: right .25s ease-out;
+  -o-transition: right .25s ease-out;
+  transition: right .25s ease-out;
 
   position: fixed;
   display: flex;
@@ -98,7 +98,12 @@ body {
     right: -14rem;
   }
 
-  @media only screen and (max-width: 768px) {  
+  @media only screen and (max-width: 768px) { 
+    -webkit-transition: top .25s ease-out;
+    -moz-transition: top .25s ease-out;
+    -o-transition: top .25s ease-out;
+    transition: top .25s ease-out;
+    
     position: fixed;
     display: flex;
     flex-direction: column-reverse;
@@ -123,46 +128,46 @@ body {
   }
 }
 
-.infoBackup {
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
+// .info {
+//   -webkit-transition: margin .25s ease-out;
+//   -moz-transition: margin .25s ease-out;
+//   -o-transition: margin .25s ease-out;
+//   transition: margin .25s ease-out;
 
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
+//   position: fixed;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-wrap: nowrap;
 
-  overflow-x: hidden;
-  overflow-y: scroll;
+//   overflow-x: hidden;
+//   overflow-y: scroll;
 
-  right: 0px;
-  top: 10%;
-  height: 60vh;
-  padding: 1rem;
+//   right: 0px;
+//   top: 10%;
+//   height: 60vh;
+//   padding: 1rem;
 
-  border-left: 1px solid $light-grey-color;
-  border-top: 1px solid $light-grey-color;
-  border-bottom: 1px solid $light-grey-color;
+//   border-left: 1px solid $light-grey-color;
+//   border-top: 1px solid $light-grey-color;
+//   border-bottom: 1px solid $light-grey-color;
 
-  border-radius: 25px 0px 0px 25px;
+//   border-radius: 25px 0px 0px 25px;
 
-  width: 15rem;
+//   width: 15rem;
 
-  &.toggled {
-    right: -14.5rem;
-  }
+//   &.toggled {
+//     right: -14.5rem;
+//   }
 
-  @media only screen and (min-width: 768px) {
-    margin-right: 0rem;
+//   @media only screen and (min-width: 768px) {
+//     margin-right: 0rem;
 
-    &.toggled {
-      right: -14.5rem;
-    }
-  }
-}
+//     &.toggled {
+//       right: -14.5rem;
+//     }
+//   }
+// }
 
 .menu {
   padding: 5px;
