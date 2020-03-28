@@ -1,3 +1,5 @@
+let currentDay = 40;
+
 window.onload = () => {
   const IINITIAL_WINDOW_SIZE = document.documentElement.clientWidth;
   const MOBILE_WINDOW_SIZE = 768;
