@@ -84,9 +84,9 @@ let tlast = [0,0],
 
 function updateDay() {
     //update total numbers
-    document.getElementsByClassName("confirmed")[0].innerText = csvData[0][currentDay+'_i'];
-    document.getElementsByClassName("deaths")[0].innerText = csvData[0][currentDay+'_d'];
-    document.getElementsByClassName("recovered")[0].innerText = csvData[0][currentDay+'_r'];
+    document.querySelector("#scoreConfirmed").innerText = csvData[0][currentDay+'_i'];
+    document.querySelector("#scoreDeaths").innerText = csvData[0][currentDay+'_d'];
+    document.querySelector("#scoreRecovered").innerText = csvData[0][currentDay+'_r'];
 
     //update individual countries
     csvData.forEach(function(entry) {

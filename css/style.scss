@@ -66,27 +66,22 @@ body {
   background-color: $BACKGROUND_COLOR;
   // border: solid 1px $MATCH_2;
   border-radius: 15px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 
   height: 10vh;
-  width: minmax(30vw, 100px);
+  width: 450px;
 
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-.deaths {
-  margin: 10px;
-}
-
-.confirmed {
-  margin: 10px;
-}
-
-.recovered {
-  margin: 10px;
+.confirmed, .deaths, .recovered {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 40px;
 }
 
 // —————————————————————————   Info   ————————————————————————— //

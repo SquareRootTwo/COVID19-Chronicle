@@ -16,10 +16,19 @@
     </div>
 
     <div class="header">
-      <div class="score">        
-        <div class="deaths">deaths: 25000</div>
-        <div class="confirmed">confirmed: 500000</div>
-        <div class="recovered">recovered: 120000</div>
+      <div class="score">
+        <div class="confirmed">
+          <div class="title">Confirmed:</div>
+          <div id="scoreConfirmed"></div>
+        </div>
+        <div class="deaths">
+          <div class="title">Deaths:</div>
+          <div id="scoreDeaths"></div>
+        </div>
+        <div class="recovered">
+          <div class="title">Recovered:</div>
+          <div id="scoreRecovered"></div>
+        </div>
       </div>
     </div>
 
@@ -42,7 +51,7 @@
 
     <div class="controls">
       <div class="controlLeft">
-        <a class="play" id="playButton" data-type="pause">
+        <a class="play" id="playButton" data-mode="pause">
           <i class="fas fa-play-circle"></i>
         </a>
         <a class="prev" id="prevButton">
