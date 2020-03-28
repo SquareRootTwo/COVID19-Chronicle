@@ -73,7 +73,7 @@ function initMap() {
                 .attr("d", path)
                 .classed("country",true);
         
-        refreshCountries();
+        updateDay();
         redraw();       // update path data
     });
 }
@@ -82,7 +82,7 @@ function initMap() {
 let tlast = [0,0], 
     slast = null;
 
-function refreshCountries() {
+function updateDay() {
     csvData.forEach(function(entry) {
         mapData.set(entry.id, entry[currentDay+'_i']);
     });

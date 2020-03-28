@@ -4,7 +4,7 @@ function increaseDay() {
   setInterval(
     function() {
       currentDay = (currentDay + 1) % 66;
-      refreshCountries();
+      updateDay();
     }, 100);
 }
 
