@@ -9,8 +9,7 @@ function increaseDay() {
 }
 
 window.onload = () => {
-  const IINITIAL_WINDOW_SIZE = document.documentElement.clientWidth;
-  const MOBILE_WINDOW_SIZE = 768;
+  const playButton = document.querySelector('#playButton');
   const infobar = document.querySelector('#infobar');
   const infobarButton = document.querySelector('#infobarButton');
 
@@ -18,5 +17,7 @@ window.onload = () => {
     infobar.classList.toggle('toggled');
   };
 
+
+  playButton.addEventListener('click', increaseDay); //pause button!!
   infobarButton.addEventListener('click', menuControl);
 };
