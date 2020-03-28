@@ -73,3 +73,20 @@ window.onload = () => {
   nextButton.addEventListener('click', function(){increaseDay(1);});
   prevButton.addEventListener('click', function(){decreaseDay(1);});
 };
+
+document.getElementById("slider").addEventListener('input', updateSlider, false);
+
+function updateSlider(e) {
+  currentDay = Number(document.getElementById("slider").value);
+  updateDay();
+}
+
+function printDate() {
+  var startDate = new Date("January 22, 2020");
+  var currentDate = startDate;
+  currentDate.setDate(currentDate.getDate()+currentDay);
+  
+  const dtf = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' });
+  const [{ value: mo },,{ value: da },,{ value: ye }] = dtf.formatToParts(currentDate);
+  return (`${da} ${mo} ${ye}`);
+}

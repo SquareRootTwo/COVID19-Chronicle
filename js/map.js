@@ -84,6 +84,7 @@ let tlast = [0,0],
 
 function updateDay() {
     //update total numbers
+    document.getElementById("slider").value = currentDay;
     document.querySelector("#scoreConfirmed").innerText = csvData[0][currentDay+'_i'];
     document.querySelector("#scoreDeaths").innerText = csvData[0][currentDay+'_d'];
     document.querySelector("#scoreRecovered").innerText = csvData[0][currentDay+'_r'];
