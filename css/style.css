@@ -172,3 +172,14 @@ body {
   font-size: 13px; }
 
 /*# sourceMappingURL=style.css.map */
+
+svg {
+  background-color: lavender;
+  border: 1px solid black;
+}
+
+path {
+  fill: oldlace;
+  stroke: #666;
+  stroke-width: .5px;
+}

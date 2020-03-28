@@ -1,0 +1,202 @@
+id,name,infected,deaths,recovered
+USA,USA,102325,1591,2471
+ITA,Italy,86498,9134,10950
+CHN,China,81340,3292,74588
+ESP,Spain,65719,5138,9357
+DEU,Germany,50871,351,6658
+FRA,France,32964,1995,5700
+IRN,Iran,32332,2378,11133
+#N/A,England,14543,759,135
+CHN,China,12928,231,1530
+PRK,South Korea,9332,139,4528
+NLD,Netherlands,8603,546,3
+AUT,Austria,7697,58,225
+BEL,Belgium,7284,289,858
+TUR,Turkey,5698,92,42
+CAN,Canada,4689,53,258
+PRT,Portugal,4268,76,43
+NOR,Norway,3755,19,6
+BRA,Brazil,3417,92,6
+AUS,Australia,3180,13,170
+SWE,Sweden,3069,105,16
+ISR,Israel,3035,12,79
+CZE,Czechia,2279,9,11
+MYS,Malaysia,2161,26,259
+IRL,Ireland,2121,22,5
+DNK,Denmark,2046,52,1
+ECU,Ecuador,1627,41,3
+CHL,Chile,1610,5,43
+LUX,Luxembourg,1605,15,40
+JPN,Japan,1468,49,372
+POL,Poland,1389,16,7
+PAK,Pakistan,1373,11,23
+ROU,Romania,1292,26,115
+ZAF,South Africa,1170,1,31
+THA,Thailand,1136,5,97
+SAU,Saudi Arabia,1104,3,35
+IDN,Indonesia,1046,87,46
+FIN,Finland,1041,7,10
+#N/A,Russia,1036,4,45
+GRC,Greece,966,28,52
+ISL,Iceland,890,2,97
+IND,India,887,20,73
+#N/A,Philippines,803,54,31
+SGP,Singapore,732,2,183
+#N/A,Diamond Princess,712,10,597
+PAN,Panama,674,9,2
+PER,Peru,635,11,16
+SVN,Slovenia,632,9,10
+ARG,Argentina,589,13,72
+HRV,Croatia,586,3,37
+MEX,Mexico,585,8,4
+#N/A,Dominican Republic,581,20,3
+EST,Estonia,575,1,11
+QAT,Qatar,562,,43
+COL,Colombia,539,6,10
+EGY,Egypt,536,30,116
+SRB,Serbia,528,8,42
+HKG,Hong Kong,518,4,111
+BHR,Bahrain,466,4,227
+IRQ,Iraq,458,40,122
+DZA,Algeria,409,26,29
+#N/A,UAE,405,2,52
+LBN,Lebanon,391,8,27
+NZL,New Zealand,368,,37
+LTU,Lithuania,358,5,1
+MAR,Morocco,345,23,11
+ARM,Armenia,329,1,28
+UKR,Ukraine,310,5,5
+HUN,Hungary,300,10,34
+BGR,Bulgaria,293,3,9
+LVA,Latvia,280,,1
+SVK,Slovakia,269,,2
+AND,Andorra,267,3,1
+#N/A,Taiwan,267,2,30
+CRI,Costa Rica,263,2,3
+URY,Uruguay,238,,
+BIH,Bosnia and Herzegovina,237,4,5
+JOR,Jordan,235,1,18
+TUN,Tunisia,227,6,2
+KWT,Kuwait,225,,57
+SMR,San Marino,223,21,4
+#N/A,North Macedonia,219,3,3
+#N/A,Moldova,199,2,2
+ALB,Albania,186,8,31
+BFA,Burkina Faso,180,9,12
+AZE,Azerbaijan,165,3,15
+#N/A,Vietnam,163,,20
+CYP,Cyprus,162,5,15
+KAZ,Kazakhstan,150,1,3
+REU,R?union,145,,1
+#N/A,Faeroe Islands,144,,54
+MLT,Malta,139,,2
+#N/A,MS Zaandam,138,4,
+GHA,Ghana,137,4,2
+OMN,Oman,131,,23
+SEN,Senegal,119,,11
+#N/A,Brunei,115,,11
+AFG,Afghanistan,110,4,2
+#N/A,Venezuela,107,1,31
+LKA,Sri Lanka,106,,7
+#N/A,Ivory Coast,101,,3
+KHM,Cambodia,99,,11
+MUS,Mauritius,94,2,
+BLR,Belarus,94,,32
+CMR,Cameroon,91,2,2
+#N/A,Palestine,91,1,17
+#N/A,Channel Islands,88,1,
+UZB,Uzbekistan,88,1,5
+GEO,Georgia,83,,14
+MNE,Montenegro,82,1,
+MTQ,Martinique,81,1,
+CUB,Cuba,80,2,4
+GLP,Guadeloupe,73,1,
+NGA,Nigeria,70,1,3
+HND,Honduras,68,1,
+TTO,Trinidad and Tobago,66,2,1
+#N/A,Bolivia,61,,
+KGZ,Kyrgyzstan,58,,
+LIE,Liechtenstein,56,,
+GIB,Gibraltar,55,,14
+RWA,Rwanda,54,,
+PRY,Paraguay,52,3,1
+#N/A,DRC,51,3,2
+MYT,Mayotte,50,,
+BGD,Bangladesh,48,5,11
+MCO,Monaco,42,,1
+MAC,Macao,34,,10
+ABW,Aruba,33,,1
+KEN,Kenya,31,1,1
+PYF,French Polynesia,30,,
+IMN,Isle of Man,29,,
+GTM,Guatemala,28,1,4
+GUF,French Guiana,28,,6
+JAM,Jamaica,26,1,2
+MDG,Madagascar,26,,
+TGO,Togo,25,1,1
+BRB,Barbados,24,,
+UGA,Uganda,23,,
+ZMB,Zambia,22,,
+BMU,Bermuda,17,,2
+ETH,Ethiopia,16,,
+MDV,Maldives,16,,9
+NCL,New Caledonia,15,,
+SLV,El Salvador,13,,
+#N/A,Tanzania,13,,1
+DJI,Djibouti,12,,
+GNQ,Equatorial Guinea,12,,
+DMA,Dominica,11,,
+MLI,Mali,11,,
+MNG,Mongolia,11,,
+#N/A,Saint Martin,11,,
+#N/A,Niger,10,1,
+#N/A,Bahamas,10,,1
+GRL,Greenland,10,,2
+SWZ,Eswatini,9,,
+#N/A,Cayman Islands,8,1,
+CUW,Cura?ao,8,1,2
+GIN,Guinea,8,,
+HTI,Haiti,8,,
+MMR,Myanmar,8,,
+NAM,Namibia,8,,2
+SUR,Suriname,8,,
+GAB,Gabon,7,1,
+ATG,Antigua and Barbuda,7,,
+GRD,Grenada,7,,
+MOZ,Mozambique,7,,
+SYC,Seychelles,7,,
+BEN,Benin,6,,
+ERI,Eritrea,6,,
+#N/A,Laos,6,,
+CPV,Cabo Verde,5,1,
+GUY,Guyana,5,1,
+ZWE,Zimbabwe,5,1,
+FJI,Fiji,5,,
+MSR,Montserrat,5,,
+#N/A,St. Barth,5,,
+#N/A,Syria,5,,
+NPL,Nepal,4,,1
+AGO,Angola,4,,
+#N/A,Congo,4,,
+#N/A,Vatican City,4,,
+#N/A,Gambia,3,1,
+#N/A,Sudan,3,1,
+BTN,Bhutan,3,,
+#N/A,CAR,3,,
+TCD,Chad,3,,
+LBR,Liberia,3,,
+MRT,Mauritania,3,,
+LCA,Saint Lucia,3,,1
+#N/A,Sint Maarten,3,,
+SOM,Somalia,3,,
+NIC,Nicaragua,2,1,
+AIA,Anguilla,2,,
+BLZ,Belize,2,,
+#N/A,British Virgin Islands,2,,
+GNB,Guinea-Bissau,2,,
+KNA,Saint Kitts and Nevis,2,,
+#N/A,Turks and Caicos,2,,
+LBY,Libya,1,,
+PNG,Papua New Guinea,1,,
+#N/A,St. Vincent Grenadines,1,,
+TLS,Timor-Leste,1,,
