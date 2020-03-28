@@ -20,6 +20,16 @@ body {
   height: 100vh;
   background-color: #35495e; }
 
+.country {
+  cursor: pointer;
+  z-index: 10; }
+  .country:hover {
+    z-index: 1;
+    stroke: black !important; }
+  .country:active, .country:focus {
+    z-index: 1;
+    fill: green !important; }
+
 .header {
   position: fixed;
   display: flex;

@@ -76,7 +76,7 @@ function initMap() {
                     return getColor(total);
                 })
                 .attr("d", path)
-                .style("stroke", STORK_COLOR);
+                .classed("country",true);
         
        redraw();       // update path data
     });
