@@ -1,5 +1,3 @@
-// include {scaleLinear} from "node_modules/d3-scale";
-
 window.onload = () => {
   const IINITIAL_WINDOW_SIZE = document.documentElement.clientWidth;
   const MOBILE_WINDOW_SIZE = 768;

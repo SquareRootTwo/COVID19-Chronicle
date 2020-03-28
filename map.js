@@ -44,7 +44,7 @@ var svg = d3.selectAll('.map')
 
 function initMap() {
     console.log("initmap");
-    d3.json("http://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
+    d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
         console.log(topo);
         svg.selectAll("path")
             .data(topo.features)
