@@ -15,14 +15,25 @@ function stopAnimation() {
 }
 
 window.onload = () => {
-  const IINITIAL_WINDOW_SIZE = document.documentElement.clientWidth;
-  const MOBILE_WINDOW_SIZE = 768;
+  const playButton = document.querySelector('#playButton');
   const infobar = document.querySelector('#infobar');
   const infobarButton = document.querySelector('#infobarButton');
+
+  const changeButton = (type) => {
+    playButton.innerHTML = "";
+    const icon = document.createElement('i');
+    if (type == 'play') {
+      icon.setAttribute('class', 'fas fa-pause-circle');
+    } else {
+      icon.setAttribute('class', 'fas fa-play-circle');
+    }
+    playButton.appendChild(icon);
+  };
 
   const menuControl = () => {
     infobar.classList.toggle('toggled');
   };
 
+  playButton.addEventListener('click', increaseDay); //pause button!!
   infobarButton.addEventListener('click', menuControl);
 };
