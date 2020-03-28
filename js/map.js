@@ -67,24 +67,31 @@ let svg = d3.selectAll('.map')
 function initMap() {
     console.log("initmap");
     d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
-        console.log(topo);
         svg.selectAll("path")
             .data(topo.features)
             .enter().append("path")
-                .style("fill", function (d){
-                    let total = mapData.get(d.id) || 0;
-                    return getColor(total);
-                })
                 .attr("d", path)
                 .style("stroke", STORK_COLOR);
         
-       redraw();       // update path data
+        refreshCountries();
+        redraw();       // update path data
     });
 }
 
 // track last translation and scale event we processed
 let tlast = [0,0], 
     slast = null;
+
+function refreshCountries() {
+    csvData.forEach(function(entry) {
+        mapData.set(entry.id, entry[currentDay+'_i']);
+    });
+    svg.selectAll("path")
+        .style("fill", function (d){
+            let total = mapData.get(d.id) || 0;
+            return getColor(total);
+        });
+}
 
 function redraw() {
     if (d3.event) { 
