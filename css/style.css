@@ -25,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  top: 10px;
+  top: 30px;
   height: 10vh;
   width: 100vw;
   overflow-x: hidden;
@@ -50,6 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  background-color: #FFFFFF;
   overflow-x: hidden;
   overflow-y: scroll;
   right: 0px;
@@ -65,18 +66,12 @@ body {
     right: -14rem; }
   @media only screen and (max-width: 768px) {
     .info {
-      -webkit-transition: margin .25s ease-out;
-      -moz-transition: margin .25s ease-out;
-      -o-transition: margin .25s ease-out;
-      transition: margin .25s ease-out;
       position: fixed;
       display: flex;
       flex-direction: column-reverse;
       justify-content: flex-start;
       align-items: stretch;
       flex-wrap: nowrap;
-      overflow-x: hidden;
-      overflow-y: scroll;
       left: 20vw;
       top: 0px;
       height: 15rem;

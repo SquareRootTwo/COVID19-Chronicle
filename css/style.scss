@@ -43,7 +43,7 @@ body {
   align-items: center;
   flex-wrap: nowrap;
 
-  top: 10px;
+  top: 30px;
   height: 10vh;
   width: 100vw;
 
@@ -77,6 +77,8 @@ body {
   align-items: center;
   flex-wrap: nowrap;
 
+  background-color: $light-background-color;
+
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -92,17 +94,11 @@ body {
 
   border-radius: 25px 0px 0px 25px;
 
-
   &.toggled {
     right: -14rem;
   }
 
-  @media only screen and (max-width: 768px) {
-    -webkit-transition: margin .25s ease-out;
-    -moz-transition: margin .25s ease-out;
-    -o-transition: margin .25s ease-out;
-    transition: margin .25s ease-out;
-  
+  @media only screen and (max-width: 768px) {  
     position: fixed;
     display: flex;
     flex-direction: column-reverse;
@@ -110,21 +106,16 @@ body {
     align-items: stretch;
     flex-wrap: nowrap;
   
-    overflow-x: hidden;
-    overflow-y: scroll;
-  
     left: 20vw;
     top: 0px;
     height: 15rem;
     width: 60vw;
 
-  
     border-left: 1px solid $light-grey-color;
     border-right: 1px solid $light-grey-color;
     border-bottom: 1px solid $light-grey-color;
   
     border-radius: 0px 0px 25px 25px;
-  
   
     &.toggled {
       top: -13.5rem;
