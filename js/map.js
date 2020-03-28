@@ -1,6 +1,8 @@
 var mapData = d3.map();
 
 const STORK_COLOR = "#A3A3A3";
+const STORK_COLOR_HOVER = "#000000";
+const STORK_COLOR_ACTIVE = "#ee8572";
 
 const getColor = (cases) => {
     if (cases > 10000) {
@@ -63,6 +65,15 @@ let svg = d3.selectAll('.map')
         .attr('width',width)
         .attr('height',height)
         .call(zoom);
+
+let popUpOpen = function(d) {
+    d3.select("countryInfo")
+        .append('div')
+        .attr()
+        .innerText
+
+    }
+
 
 function initMap() {
     console.log("initmap");
@@ -127,7 +138,7 @@ function redraw() {
         slast = scale;
         tlast = t;
     }
-    
+
     svg.selectAll('path')       // re-project path data
-        .attr('d', path);
+        .attr('d', path)
 }
