@@ -91,3 +91,5 @@ function printDate() {
   const [{ value: mo },,{ value: da },,{ value: ye }] = dtf.formatToParts(currentDate);
   return (`${da} ${mo} ${ye}`);
 }
+
+window.addEventListener('resize', mapOnResize);

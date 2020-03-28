@@ -66,6 +66,13 @@ let svg = d3.selectAll('.map')
         .attr('height',height)
         .call(zoom);
 
+function mapOnResize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    document.querySelector("svg").setAttribute("width",width);
+    document.querySelector("svg").setAttribute("height",height);
+}
+
 let popUpOpen = function(d) {
     d3.select("countryInfo")
         .append('div')
@@ -76,7 +83,6 @@ let popUpOpen = function(d) {
 
 
 function initMap() {
-    console.log("initmap");
     d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
         svg.selectAll("path")
             .data(topo.features)
