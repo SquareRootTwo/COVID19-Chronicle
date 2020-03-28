@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 10vh;
+  height: 75px;
   top: 30px; }
 
 .score {
@@ -48,7 +48,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  height: 10vh;
+  height: 75px;
   width: 450px;
   overflow-x: hidden;
   overflow-y: hidden; }
@@ -111,11 +111,11 @@ body {
   height: auto; }
 
 .controls {
-  position: relative;
+  position: absolute;
+  bottom: 15px;
   height: 50px;
   width: 99vw;
   margin: 10px;
-  top: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,7 +148,7 @@ body {
 
 .controlLeft {
   height: 6rem;
-  width: auto;
+  width: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,15 +156,13 @@ body {
 
 .controlRight {
   height: 6rem;
-  width: auto;
+  width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px; }
 
 .infoButton {
-  width: auto;
-  height: auto;
   font-size: 3rem; }
 
 .play {
