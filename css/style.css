@@ -6,18 +6,19 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: #FFFFFF;
-  color: #c7c7c7;
+  background-color: white;
+  color: #35495e;
   display: -webkit-box !important; }
 
 body {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito", sans-serif;
+  color: white; }
 
 .map {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: #FFFFFF; }
+  background-color: #35495e; }
 
 .header {
   position: fixed;
@@ -29,6 +30,8 @@ body {
 
 .score {
   display: flex;
+  background-color: #63b7af;
+  border-radius: 15px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
@@ -56,7 +59,7 @@ body {
   justify-content: center;
   align-items: stretch;
   flex-wrap: nowrap;
-  background-color: #FFFFFF;
+  background-color: #63b7af;
   overflow-x: hidden;
   overflow-y: scroll;
   margin: 0px;
@@ -65,7 +68,6 @@ body {
   top: 10%;
   height: 60vh;
   width: 15rem;
-  border: 1px solid #c7c7c7;
   border-radius: 15px; }
   .info.toggled {
     right: -18rem; }
@@ -111,7 +113,7 @@ body {
 
 .button, .menu, .infoButton, .play, .next, .prev, .settings {
   display: inline-block;
-  color: #c7c7c7;
+  color: #63b7af;
   text-align: center;
   vertical-align: middle;
   outline: 0;
@@ -121,14 +123,14 @@ body {
   -ms-user-select: none;
   user-select: none;
   background-color: transparent;
-  border: 1px solid transparent;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  border: none;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out; }
   .button:hover, .menu:hover, .infoButton:hover, .play:hover, .next:hover, .prev:hover, .settings:hover {
-    color: #4d669c;
+    color: #347474;
     text-decoration: none; }
   .button:focus, .menu:focus, .infoButton:focus, .play:focus, .next:focus, .prev:focus, .settings:focus {
-    box-shadow: 0 0 0 0.2rem #2d3c5c; }
+    box-shadow: 0 0 0 0.2rem #1b3f3f; }
   .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled {
     opacity: 0.65; }
   .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled {
@@ -172,14 +174,3 @@ body {
   font-size: 13px; }
 
 /*# sourceMappingURL=style.css.map */
-
-svg {
-  background-color: lavender;
-  border: 1px solid black;
-}
-
-path {
-  fill: oldlace;
-  stroke: #666;
-  stroke-width: .5px;
-}

@@ -15,14 +15,15 @@ html, body {
   overflow-x: hidden;
   overflow-y: hidden;
 
-  background-color: $light-background-color;
-  color: $light-grey-color;
+  background-color: white;
+  color: $MATCH_2;
 
   display: -webkit-box !important;
 }
 
 body {
-  font-family: $font-family-sans-serif;
+  font-family: $FONT_FAMILY;
+  color: $FONT_COLOR;
 }
 
 // —————————————————————————   Map   ————————————————————————— //
@@ -31,7 +32,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: $light-background-color;
+  background-color: $MATCH_2;
 }
 
 // —————————————————————————   Score   ————————————————————————— //
@@ -47,6 +48,9 @@ body {
 
 .score {
   display: flex;
+  background-color: $BACKGROUND_COLOR;
+  // border: solid 1px $MATCH_2;
+  border-radius: 15px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
@@ -84,7 +88,7 @@ body {
   align-items: stretch;
   flex-wrap: nowrap;
 
-  background-color: $light-background-color;
+  background-color: $BACKGROUND_COLOR;
 
   overflow-x: hidden;
   overflow-y: scroll;
@@ -96,7 +100,7 @@ body {
   height: 60vh;
   width: 15rem;
 
-  border: 1px solid $light-grey-color;
+  // border: 1px solid $MATCH_2;
   
   border-radius: 15px;
 
@@ -269,7 +273,7 @@ body {
 
 .button {
   display: inline-block;
-  color: $light-grey-color;
+  color: $BUTTON_COLOR;
   text-align: center;
   vertical-align: middle;
   outline: 0;
@@ -280,18 +284,24 @@ body {
       -ms-user-select: none;
           user-select: none;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: none;
 
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out, 
+  background-color 0.15s ease-in-out, 
+  border-color 0.15s ease-in-out, 
+  box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, 
+  background-color 0.15s ease-in-out, 
+  border-color 0.15s ease-in-out, 
+  box-shadow 0.15s ease-in-out;
 
   &:hover {
-    color: $middle-blue-color;
+    color: $BUTTON_COLOR_HOVER;
     text-decoration: none;
   }
 
   &:focus {
-    box-shadow: 0 0 0 0.2rem $dark-blue-color;
+    box-shadow: 0 0 0 0.2rem $BUTTON_COLOR_ACTIVE;
   }
 
   &:disabled {

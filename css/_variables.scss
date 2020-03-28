@@ -1,15 +1,15 @@
 // —————————————————————————   Font   ————————————————————————— //
 
-$font-family-sans-serif: "Nunito", sans-serif;
+$FONT_FAMILY: "Nunito", sans-serif;
 
 // —————————————————————————   Colors   ————————————————————————— //
 
-$light-background-color: #FFFFFF;
-$dark-background-color:#071738;
+$FONT_COLOR: white;
 
-$dark-blue-color:#2d3c5c;
-$middle-blue-color:#4d669c;
-$light-grey-color: rgb(199, 199, 199);
+$BUTTON_COLOR: #63b7af;
+$BUTTON_COLOR_HOVER: #347474;
+$BUTTON_COLOR_ACTIVE: #1b3f3f;
+$MATCH_1: #ee8572;
+$MATCH_2: #35495e;
 
-$font-grey-color: rgb(199, 199, 199);
-
+$BACKGROUND_COLOR: #63b7af;
