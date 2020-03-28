@@ -1,11 +1,16 @@
 let currentDay = 40;
+let playInterval;
 
-function increaseDay() {
-  setInterval(
+function playAnimation() {
+  playInterval = setInterval(
     function() {
       currentDay = (currentDay + 1) % 66;
       updateDay();
     }, 100);
+}
+
+function stopAnimation() {
+  clearInterval(playInterval);
 }
 
 window.onload = () => {
