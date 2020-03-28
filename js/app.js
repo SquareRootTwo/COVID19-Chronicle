@@ -1,13 +1,26 @@
 let currentDay = 40;
 let playInterval;
-let lastDay = 66;
+let lastDay;
 
 function playAnimation(){
   playInterval = setInterval(
     function() {
-      currentDay = (currentDay + 1) % (lastDay+1);
-      updateDay();
+      increaseDay(1);
     }, 100);
+}
+
+function increaseDay(step){
+  if(currentDay < lastDay) {
+    currentDay = currentDay + step;
+    updateDay();
+  }
+}
+
+function decreaseDay(step){
+  if(currentDay > 0) {
+    currentDay = (currentDay - step);
+    updateDay();
+  }
 }
 
 function stopAnimation() {
@@ -16,6 +29,8 @@ function stopAnimation() {
 
 window.onload = () => {
   const playButton = document.querySelector('#playButton');
+  const nextDay = document.querySelector('#nextButton');
+  const prevDay = document.querySelector('#prevButton');
   const infobar = document.querySelector('#infobar');
   const infobarButton = document.querySelector('#infobarButton');
 
@@ -50,4 +65,6 @@ window.onload = () => {
 
   playButton.addEventListener('click', animationControl);
   infobarButton.addEventListener('click', menuControl);
+  nextButton.addEventListener('click', function(){increaseDay(1);});
+  prevButton.addEventListener('click', function(){decreaseDay(1);});
 };
