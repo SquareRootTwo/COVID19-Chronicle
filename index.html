@@ -6,38 +6,64 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <style src="css/style.css"></style>
+    <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+
 
     <title>COVID19-Chronicle</title>
   </head>
   <body>
-    <canvas class="map"></canvas>
+    <div class="map">
+      <canvas>
+        
+      </canvas>
+    </div>
 
     <div class="score">
-      
+      <div class="deaths">deaths: 25000</div>
+      <div class="confirmed">confirmed: 500000</div>
+      <div class="recovered">recovered: 120000</div>
+    </div>
+
+    <div class="info" id="infobar">
+      <a class="menu button" id="infobarButton">
+        <i class="fas fa-ellipsis-v"></i>
+      </a>
+      <div class="content">
+        asdfasdjflasdkjflaskdjflajsdfla
+        asdfasdjflasdkjflaskdjflajsdfla
+        asdfasdjflasdkjflaskdjflajsdfla
+        asdfasdjflasdkjflaskdjflajsdfla
+        asdfasdjflasdkjflaskdjflajsdfla
+        asdfasdjflasdkjflaskdjflajsdfla
+        asdfasdjflasdkjflaskdjflajsdfla
+      </div>
     </div>
 
     <div class="controls">
-      <a class="play" id="">
-        <i class="fas fa-play-circle"></i>
-      </a>
-      <a class="prev" id="">
-        <i class="fas fa-chevron-circle-left"></i>
-      </a>
-      <a class="next" id="">
-        <i class="fas fa-chevron-circle-right"></i>
-      </a>
-      <div class="timeline">
+      <div class="controlLeft">
+        <a class="play" id="">
+          <i class="fas fa-play-circle"></i>
+        </a>
+        <a class="prev" id="">
+          <i class="fas fa-chevron-circle-left"></i>
+        </a>
+        <a class="next" id="">
+          <i class="fas fa-chevron-circle-right"></i>
+        </a>
+      </div>
+      <div class="timeline graphic">
         <form class="slidebar" action="/action_page.php">
-          <label for="vol">Date</label>
           <input type="range" id="vol" name="vol" min="0" max="100">
         </form>
       </div>
-      <a class="settings">
-        
-      </a>
+      <div class="controlRight">
+        <a class="settings">
+          <i class="fas fa-compass"></i>
+        </a>
+      </div>
 
     </div>
 
+    <script src="js/app.js"></script>
   </body>
 </html>
