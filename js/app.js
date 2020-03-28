@@ -30,6 +30,7 @@ const animationControl = () => {
 }
 
 function playAnimation(){
+  if(currentDay == lastDay) {currentDay = 0;}
   changeButton('play');
   playButton.dataset['mode'] = 'play';
   playInterval = setInterval(
@@ -86,7 +87,7 @@ function printDate() {
   var currentDate = startDate;
   currentDate.setDate(currentDate.getDate()+currentDay);
   
-  const dtf = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' });
+  const dtf = new Intl.DateTimeFormat('en', { year: '2-digit', month: 'short', day: '2-digit' });
   const [{ value: mo },,{ value: da },,{ value: ye }] = dtf.formatToParts(currentDate);
   return (`${da} ${mo} ${ye}`);
 }
