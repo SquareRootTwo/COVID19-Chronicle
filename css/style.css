@@ -61,16 +61,14 @@ body {
   overflow-y: scroll;
   margin: 0px;
   padding: 0px;
-  right: 0px;
+  right: 2.5rem;
   top: 10%;
   height: 60vh;
   width: 15rem;
-  border-left: 1px solid #c7c7c7;
-  border-top: 1px solid #c7c7c7;
-  border-bottom: 1px solid #c7c7c7;
-  border-radius: 25px 0px 0px 25px; }
+  border: 1px solid #c7c7c7;
+  border-radius: 15px; }
   .info.toggled {
-    right: -13rem; }
+    right: -18rem; }
   @media only screen and (max-width: 768px) {
     .info {
       -webkit-transition: top .25s ease-out;
@@ -84,35 +82,21 @@ body {
       align-items: stretch;
       flex-wrap: nowrap;
       left: 20vw;
-      top: 0px;
+      top: 2rem;
       height: 15rem;
-      width: 60vw;
-      border-left: 1px solid #c7c7c7;
-      border-right: 1px solid #c7c7c7;
-      border-bottom: 1px solid #c7c7c7;
-      border-top: none;
-      border-radius: 0px 0px 25px 25px; }
+      width: 60vw; }
       .info.toggled {
-        top: -13rem; } }
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+        top: -18rem; } }
 
 .menu {
   padding: 5px; }
 
 .content {
-  overflow: hidden;
-  width: 11rem;
-  padding: 15px; }
-  @media only screen and (max-width: 768px) {
-    .content {
-      width: auto;
-      padding: 15px;
-      margin-left: 0px;
-      margin-bottom: 15px; } }
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 15px;
+  width: auto;
+  height: auto; }
 
 .controls {
   position: relative;
@@ -125,7 +109,7 @@ body {
   align-items: center;
   flex-wrap: nowrap; }
 
-.button, .play, .next, .prev, .settings {
+.button, .menu, .infoButton, .play, .next, .prev, .settings {
   display: inline-block;
   color: #c7c7c7;
   text-align: center;
@@ -140,14 +124,14 @@ body {
   border: 1px solid transparent;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .button:hover, .play:hover, .next:hover, .prev:hover, .settings:hover {
+  .button:hover, .menu:hover, .infoButton:hover, .play:hover, .next:hover, .prev:hover, .settings:hover {
     color: #4d669c;
     text-decoration: none; }
-  .button:focus, .play:focus, .next:focus, .prev:focus, .settings:focus {
+  .button:focus, .menu:focus, .infoButton:focus, .play:focus, .next:focus, .prev:focus, .settings:focus {
     box-shadow: 0 0 0 0.2rem #2d3c5c; }
-  .button:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled {
+  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled {
     opacity: 0.65; }
-  .button:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled {
+  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled {
     pointer-events: none; }
 
 .controlLeft {
@@ -155,6 +139,11 @@ body {
 
 .controlRight {
   margin: 10px; }
+
+.infoButton {
+  width: auto;
+  height: auto;
+  font-size: 3rem; }
 
 .play {
   font-size: 3rem; }
