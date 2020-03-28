@@ -1,5 +1,6 @@
 let currentDay = 40;
 let playInterval;
+let lastDay = 66;
 
 window.onload = () => {
   const playButton = document.querySelector('#playButton');
