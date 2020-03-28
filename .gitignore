@@ -1,0 +1,10 @@
+node_modules/*
+node_modules/.bin/csv2json
+node_modules/.bin/csv2tsv
+node_modules/.bin/dsv2dsv
+node_modules/.bin/dsv2json
+node_modules/.bin/json2csv
+node_modules/.bin/json2dsv
+node_modules/.bin/json2tsv
+node_modules/.bin/tsv2csv
+node_modules/.bin/tsv2json
