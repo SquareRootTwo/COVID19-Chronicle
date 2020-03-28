@@ -2,6 +2,18 @@ let currentDay = 40;
 let playInterval;
 let lastDay = 66;
 
+function playAnimation(){
+  playInterval = setInterval(
+    function() {
+      currentDay = (currentDay + 1) % (lastDay+1);
+      updateDay();
+    }, 100);
+}
+
+function stopAnimation() {
+  clearInterval(playInterval);
+}
+
 window.onload = () => {
   const playButton = document.querySelector('#playButton');
   const infobar = document.querySelector('#infobar');
@@ -18,19 +30,7 @@ window.onload = () => {
     console.log(icon);
     playButton.appendChild(icon);
   };
-
-  const playAnimation = () => {
-    playInterval = setInterval(
-      function() {
-        currentDay = (currentDay + 1) % 66;
-        updateDay();
-      }, 100);
-  }
   
-  const stopAnimation = () => {
-    clearInterval(playInterval);
-  }
-
   const animationControl = () => {
     const mode = playButton.dataset['mode']
     if (mode === 'play') {
