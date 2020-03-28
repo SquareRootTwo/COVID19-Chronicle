@@ -71,7 +71,7 @@ function initMap() {
             .data(topo.features)
             .enter().append("path")
                 .attr("d", path)
-                .style("stroke", STORK_COLOR);
+                .classed("country",true);
         
         refreshCountries();
         redraw();       // update path data
