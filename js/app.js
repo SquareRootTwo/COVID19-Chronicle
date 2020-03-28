@@ -35,11 +35,11 @@ window.onload = () => {
     const mode = playButton.dataset['mode']
     if (mode === 'play') {
       stopAnimation();
-      changeButton('play');
+      changeButton('pause');
       playButton.dataset['mode'] = 'pause';
     } else {
       playAnimation();
-      changeButton('pause');
+      changeButton('play');
       playButton.dataset['mode'] = 'play';
     }
   }
