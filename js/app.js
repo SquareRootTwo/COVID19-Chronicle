@@ -1,10 +1,11 @@
 let currentDay = 40;
 let playInterval;
+let lastDay = 66;
 
 function playAnimation() {
   playInterval = setInterval(
     function() {
-      currentDay = (currentDay + 1) % 66;
+      currentDay = ((currentDay + 1) % 65)+1;
       updateDay();
     }, 100);
 }

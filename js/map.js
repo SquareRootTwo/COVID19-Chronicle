@@ -83,6 +83,12 @@ let tlast = [0,0],
     slast = null;
 
 function updateDay() {
+    //update total numbers
+    document.getElementsByClassName("confirmed")[0].innerText = csvData[0][currentDay+'_i'];
+    document.getElementsByClassName("deaths")[0].innerText = csvData[0][currentDay+'_d'];
+    document.getElementsByClassName("recovered")[0].innerText = csvData[0][currentDay+'_r'];
+
+    //update individual countries
     csvData.forEach(function(entry) {
         mapData.set(entry.id, entry[currentDay+'_i']);
     });
