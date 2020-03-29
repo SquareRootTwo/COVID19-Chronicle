@@ -153,7 +153,7 @@ d3.selection.prototype.moveToFront = function() {
   };
 
 function initMap() {
-    d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
+    d3.json("https://raw.githubusercontent.com/SquareRootTwo/COVID19-Chronicle/master/data/world-110m.json", function ready(error, topo) {  
         svg.selectAll("path")
             .data(topo.features)
             .enter().append("path")
