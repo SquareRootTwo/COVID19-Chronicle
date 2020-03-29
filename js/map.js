@@ -137,7 +137,6 @@ function getPopUpPosX (mouseX) {
     } else {
         x = mouseX + 'px';
     }
-    popUpPosition.x = x;
     return x;
 }
 
@@ -149,7 +148,6 @@ function getPopUpPosY (mouseY) {
     } else {
         y = mouseY + 'px';
     }
-    popUpPosition.y = y;
     return y;
 }
 
@@ -164,8 +162,8 @@ function popUpOpen (d) {
             .html("")
             .append('div')
             .classed("popUp", true)
-            // .style('left', getPopUpPosX(d3.mouse(this)[0]))
-            // .style('top', getPopUpPosY(d3.mouse(this)[1]))
+            .style('left', getPopUpPosX(d3.mouse(this)[0]))
+            .style('top', getPopUpPosY(d3.mouse(this)[1]))
 
         updatePopup();
     }
@@ -292,7 +290,7 @@ function redraw() {
         .attr('d', path)
 }
 
-// d3.select("body").on("mousedown", clearPopUp);
-// d3.select("body").on("wheel", clearPopUp);
+d3.select("body").on("mousedown", clearPopUp);
+d3.select("body").on("wheel", clearPopUp);
 
 window.addEventListener('resize', mapOnResize);
