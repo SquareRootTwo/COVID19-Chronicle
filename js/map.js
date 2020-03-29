@@ -1,6 +1,7 @@
 var mapData = d3.map();
 let currentPopupCountry;
 let currentSetting = 'ci';
+let popupIsOpen = false;
 
 const THRESHOLD_POPUP = 400;
 
@@ -166,6 +167,7 @@ function popUpOpen (d) {
             .style('top', getPopUpPosY(d3.mouse(this)[1]))
 
         updatePopup();
+        popupIsOpen = true;
     }
 }
 
@@ -198,9 +200,12 @@ function updatePopup() {
 }
 
 function clearPopUp (d) {
-    d3.select("#countryInfo")
+    if(popupIsOpen && !document.querySelector(".controls").contains(d.target)) {
+        d3.select("#countryInfo")
         .html("")
         .classed("popUp", false);
+        popupIsOpen = false;
+    }
 }
 
 
@@ -290,7 +295,9 @@ function redraw() {
         .attr('d', path)
 }
 
-d3.select("body").on("mousedown", clearPopUp);
-d3.select("body").on("wheel", clearPopUp);
+// d3.select("body").on("mousedown", clearPopUp);
+// d3.select("body").on("wheel", clearPopUp);
+document.body.addEventListener("wheel", clearPopUp);
+document.body.addEventListener("mousedown", clearPopUp);
 
 window.addEventListener('resize', mapOnResize);
