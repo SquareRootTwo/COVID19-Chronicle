@@ -66,6 +66,13 @@ let svg = d3.selectAll('.map')
         .attr('height',height)
         .call(zoom);
 
+function mapOnResize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    document.querySelector("svg").setAttribute("width",width);
+    document.querySelector("svg").setAttribute("height",height);
+}
+
 let popUpOpen = function(d) {
     d3.select("#countryInfo")
         .html("")
@@ -106,6 +113,7 @@ function updateDay() {
     document.querySelector("#scoreConfirmed").innerText = csvData[0][currentDay+'_i'];
     document.querySelector("#scoreDeaths").innerText = csvData[0][currentDay+'_d'];
     document.querySelector("#scoreRecovered").innerText = csvData[0][currentDay+'_r'];
+    document.querySelector(".date").innerText = printDate();
 
     //update individual countries
     csvData.forEach(function(entry) {
