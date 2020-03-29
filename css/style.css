@@ -1,420 +1,58 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito");
-html, body {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-color: white;
-  color: #35495e;
-  display: -webkit-box !important; }
+/*
+Error: Invalid CSS after "  padding: ": expected expression (e.g. 1px, bold), was ";"
+        on line 332 of style.scss
 
-body {
-  font-family: "Nunito", sans-serif;
-  color: white; }
+327: 
+328: .newsBoxTile {
+329:   font-size: 1.3rem;
+330:   font-weight: bold;
+331:   text-align: center;
+332:   padding: ;
+333: }
+334: 
+335: .newsBoxSubtitle {
+336:   text-align: center;
+337:   font-size: 0.8rem;
 
-.title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  white-space: nowrap; }
-
-.titleScore {
-  font-size: 0.8rem;
-  font-weight: bold;
-  white-space: nowrap; }
-
-.numbersScore {
-  font-size: 1.3rem; }
-
-.article {
-  font-size: 1rem; }
-
-.map {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: #35495e; }
-
-.country {
-  cursor: pointer;
-  opacity: 0.95; }
-  .country:hover {
-    stroke: #838383 !important;
-    stroke-width: 2px !important; }
-  .country:active {
-    stroke: #ee8572 !important;
-    stroke-width: 2px !important; }
-
-.countryActive {
-  fill: #000000 !important; }
-
-.popUp {
-  position: absolute;
-  background-color: #63b7af;
-  opacity: 0.95;
-  border-radius: 15px;
-  width: auto;
-  height: auto;
-  padding-bottom: 20px;
-  box-shadow: 10px 10px 25px 0px #35495e;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  text-align: left; }
-
-hr {
-  border: 0;
-  height: 1px;
-  position: relative;
-  width: 100%;
-  background: white; }
-
-.popupHeader {
-  margin: 20px 20px 5px 20px;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row !important;
-  justify-content: space-between;
-  align-items: center; }
-
-.popupContainer {
-  margin-left: 20px;
-  margin-right: 20px;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row !important;
-  justify-content: space-between;
-  align-items: center; }
-
-.popupDate, .popupNumbers {
-  padding-left: 30px; }
-
-.header {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100px;
-  top: 30px; }
-
-.score {
-  display: flex;
-  background-color: #63b7af;
-  box-shadow: 10px 10px 25px 0px #35495e;
-  opacity: 0.95;
-  border-radius: 15px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  height: 100px;
-  width: auto;
-  overflow-x: hidden;
-  overflow-y: hidden; }
-  @media only screen and (max-width: 768px) {
-    .score {
-      width: auto; }
-      .score div {
-        margin: 0px;
-        padding: 5px; } }
-
-.vline {
-  border-left: 1px solid white;
-  height: 100%; }
-
-.confirmed, .deaths, .recovered {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  margin: 40px; }
-
-.dropdown {
-  position: relative;
-  display: inline-block; }
-
-.settingsMenu {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  box-shadow: 10px 10px 25px 0px #35495e;
-  background-color: #63b7af;
-  opacity: 0.95;
-  border-radius: 15px;
-  min-width: 120px;
-  height: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  -webkit-transition: right .25s ease-out;
-  -moz-transition: right .25s ease-out;
-  -o-transition: right .25s ease-out;
-  transition: right .25s ease-out;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-  .settingsMenu a {
-    cursor: pointer; }
-  .settingsMenu a:hover {
-    opacity: 1; }
-
-.settingsInput {
-  padding: 5px; }
-  .settingsInput label {
-    padding-left: 15px;
-    padding-right: 15px; }
-  .settingsInput input {
-    cursor: pointer;
-    margin-left: 10px; }
-
-.toggled {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  text-align: left; }
-
-input[type='radio'] {
-  background-color: yellowgreen; }
-
-.menuItem {
-  text-align: center;
-  padding: 10px; }
-
-.info {
-  -webkit-transition: right .25s ease-out;
-  -moz-transition: right .25s ease-out;
-  -o-transition: right .25s ease-out;
-  transition: right .25s ease-out;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  background-color: #63b7af;
-  box-shadow: 10px 10px 25px 0px #35495e;
-  opacity: 0.95;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  margin: 0px;
-  padding: 0px;
-  right: 2.5rem;
-  top: 10vh;
-  height: 80vh;
-  width: 15rem;
-  -ms-overflow-style: none;
-  border-radius: 15px; }
-  .info::-webkit-scrollbar {
-    display: none; }
-  .info * {
-    -ms-overflow-style: none; }
-  .info.toggled {
-    right: -18rem; }
-  @media only screen and (max-width: 1220px) {
-    .info {
-      -webkit-transition: top .25s ease-out;
-      -moz-transition: top .25s ease-out;
-      -o-transition: top .25s ease-out;
-      transition: top .25s ease-out;
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: stretch;
-      flex-wrap: nowrap;
-      left: 20vw;
-      top: 35vh;
-      height: 30vh;
-      width: 60vw; }
-      .info.toggled {
-        top: -18rem; } }
-
-.menu {
-  padding: 5px;
-  color: whie; }
-
-.content {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  -ms-overflow-style: none; }
-  .content .hline, .content hr {
-    border: 0;
-    height: 1px;
-    position: relative;
-    width: 100%;
-    background: white; }
-  .content a {
-    text-align: center;
-    color: white !important;
-    padding: 20px 20px 20px 20px; }
-    .content a:hover {
-      color: #347474 !important; }
-    .content a:active, .content a:focus {
-      color: #ee8572 !important; }
-  .content::-webkit-scrollbar {
-    display: none; }
-  .content * {
-    -ms-overflow-style: none; }
-
-.controls {
-  position: absolute;
-  bottom: 15px;
-  height: 50px;
-  width: 99vw;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap; }
-  @media only screen and (max-width: 768px) {
-    .controls {
-      flex-direction: row-reverse;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      bottom: 10px;
-      width: 100%;
-      height: 180px; }
-      .controls div {
-        margin: 0px !important; } }
-
-.button, .menu, .infoButton, .play, .pause, .next, .prev, .news, .settings, .date {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 1.5rem;
-  outline: 0;
-  background-color: #63b7af;
-  box-shadow: 10px 10px 25px 0px #35495e;
-  opacity: 0.85;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: none;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out; }
-  .button:hover, .menu:hover, .infoButton:hover, .play:hover, .pause:hover, .next:hover, .prev:hover, .news:hover, .settings:hover, .date:hover {
-    opacity: 1;
-    text-decoration: none; }
-  .button:focus .button:active, .menu:focus .button:active, .infoButton:focus .button:active, .play:focus .button:active, .pause:focus .button:active, .next:focus .button:active, .prev:focus .button:active, .news:focus .button:active, .settings:focus .button:active, .date:focus .button:active, .button:focus .menu:active, .menu:focus .menu:active, .infoButton:focus .menu:active, .play:focus .menu:active, .pause:focus .menu:active, .next:focus .menu:active, .prev:focus .menu:active, .news:focus .menu:active, .settings:focus .menu:active, .date:focus .menu:active, .button:focus .infoButton:active, .menu:focus .infoButton:active, .infoButton:focus .infoButton:active, .play:focus .infoButton:active, .pause:focus .infoButton:active, .next:focus .infoButton:active, .prev:focus .infoButton:active, .news:focus .infoButton:active, .settings:focus .infoButton:active, .date:focus .infoButton:active, .button:focus .play:active, .menu:focus .play:active, .infoButton:focus .play:active, .play:focus .play:active, .pause:focus .play:active, .next:focus .play:active, .prev:focus .play:active, .news:focus .play:active, .settings:focus .play:active, .date:focus .play:active, .button:focus .pause:active, .menu:focus .pause:active, .infoButton:focus .pause:active, .play:focus .pause:active, .pause:focus .pause:active, .next:focus .pause:active, .prev:focus .pause:active, .news:focus .pause:active, .settings:focus .pause:active, .date:focus .pause:active, .button:focus .next:active, .menu:focus .next:active, .infoButton:focus .next:active, .play:focus .next:active, .pause:focus .next:active, .next:focus .next:active, .prev:focus .next:active, .news:focus .next:active, .settings:focus .next:active, .date:focus .next:active, .button:focus .prev:active, .menu:focus .prev:active, .infoButton:focus .prev:active, .play:focus .prev:active, .pause:focus .prev:active, .next:focus .prev:active, .prev:focus .prev:active, .news:focus .prev:active, .settings:focus .prev:active, .date:focus .prev:active, .button:focus .news:active, .menu:focus .news:active, .infoButton:focus .news:active, .play:focus .news:active, .pause:focus .news:active, .next:focus .news:active, .prev:focus .news:active, .news:focus .news:active, .settings:focus .news:active, .date:focus .news:active, .button:focus .settings:active, .menu:focus .settings:active, .infoButton:focus .settings:active, .play:focus .settings:active, .pause:focus .settings:active, .next:focus .settings:active, .prev:focus .settings:active, .news:focus .settings:active, .settings:focus .settings:active, .date:focus .settings:active, .button:focus .date:active, .menu:focus .date:active, .infoButton:focus .date:active, .play:focus .date:active, .pause:focus .date:active, .next:focus .date:active, .prev:focus .date:active, .news:focus .date:active, .settings:focus .date:active, .date:focus .date:active {
-    opacity: 1;
-    background-color: #1b3f3f !important; }
-  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .pause:disabled, .next:disabled, .prev:disabled, .news:disabled, .settings:disabled, .date:disabled {
-    opacity: 0.65;
-    pointer-events: none; }
-
-.controlLeft {
-  height: 6rem;
-  width: 150px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px; }
-
-.controlRight {
-  height: 6rem;
-  width: 250px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px; }
-
-.infoButton, .play, .pause, .next, .prev, .news, .settings {
-  font-size: 3rem; }
-
-.infoButton i, .play i, .pause i, .news i, .settings i {
-  font-size: 1.3rem !important; }
-
-.play i {
-  position: relative;
-  left: 2px; }
-
-.prev i {
-  position: relative;
-  left: -1px; }
-
-.next i {
-  position: relative;
-  left: 1px; }
-
-.date {
-  cursor: default !important;
-  width: 100px !important;
-  padding: 0px !important; }
-  .date:hover {
-    background-color: #63b7af !important; }
-
-.timeline {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 200px;
-  height: 5px;
-  border-radius: 3px;
-  background: #d3d3d3;
-  box-shadow: 10px 10px 25px 0px #35495e;
-  outline: none;
-  opacity: 0.85;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  position: relative;
-  top: 2px;
-  cursor: pointer; }
-  .timeline:hover {
-    opacity: 1; }
-  .timeline::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    outline: none;
-    appearance: none;
-    width: 5px;
-    height: 35px;
-    border-radius: 3px;
-    position: relative;
-    bottom: 7px;
-    background: #63b7af;
-    cursor: pointer; }
-  .timeline::-moz-range-thumb {
-    width: 5px;
-    height: 50px;
-    background: #63b7af;
-    outline: none;
-    cursor: pointer; }
-
-.settings {
-  font-size: 3rem; }
-
-i {
-  font-size: 1.5rem; }
-
-.svgIcon {
-  padding: 0;
-  display: inline-flex;
-  align-self: center; }
-  .svgIcon svg {
-    width: 0.8em;
-    height: 0.8em; }
-  .svgIcon:hover {
-    color: white;
-    fill: white; }
-  .svgIcon svg path,
-  .svgIcon svg polygon,
-  .svgIcon svg rect {
-    color: white;
-    fill: white; }
-  .svgIcon svg circle {
-    stroke: white;
-    stroke-width: 1; }
-
-.svg-baseline svg {
-  top: .125em;
-  position: relative; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+style.scss:332
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:855:in `assert_expr'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in `sass_script'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1002:in `value!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:807:in `block in try_declaration'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  padding: \": expected expression (e.g. 1px, bold), was \";\"\A         on line 332 of style.scss\A \A 327: \A 328: .newsBoxTile {\A 329:   font-size: 1.3rem;\A 330:   font-weight: bold;\A 331:   text-align: center;\A 332:   padding: ;\A 333: }\A 334: \A 335: .newsBoxSubtitle {\A 336:   text-align: center;\A 337:   font-size: 0.8rem;"; }
