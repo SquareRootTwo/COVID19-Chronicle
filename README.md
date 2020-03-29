@@ -9,6 +9,6 @@ COVID Chronicles visualizes the spread of the virus over time and sets these num
 The data is provided by John Hopkins CSSE and can be [found on Github](https://github.com/CSSEGISandData/COVID-19). It is updated daily.
 For newspaper articles, COVID Chronicles currently solely relies on articles of the [New York Times](https://www.nytimes.com/). The publication has a global reputation for neutral and detailed coverage of the Corona pandemic. Future versions of COVID Chronicles might include more diverse and localized sources. 
 <br><br>
-<b>Developed by:<b><br>
+<b>Developed by:</b><br>
 Patrick Züst, ETH Zurich: zuestp@ethz.ch<br>
 Jonas Spieler, ETH Zurich: jspieler@ethz.ch 
