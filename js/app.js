@@ -12,9 +12,11 @@ const changeButton = (type) => {
   playButton.innerHTML = "";
   const icon = document.createElement('i');
   if (type === 'play') {
-    icon.setAttribute('class', 'fas fa-pause-circle');
+    icon.setAttribute('class', 'fas fa-pause');
+    playButton.setAttribute('class', 'pause');
   } else if (type === 'pause'){
-    icon.setAttribute('class', 'fas fa-play-circle');
+    icon.setAttribute('class', 'fas fa-play');
+    playButton.setAttribute('class', 'play');
   }
   playButton.appendChild(icon);
 };

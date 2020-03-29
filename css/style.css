@@ -142,7 +142,7 @@ body {
   align-items: center;
   flex-wrap: nowrap; }
 
-.button, .menu, .infoButton, .play, .next, .prev, .settings, .date {
+.button, .menu, .infoButton, .play, .pause, .next, .prev, .news, .settings, .date {
   width: 3rem;
   height: 3rem;
   border-radius: 1.5rem;
@@ -162,13 +162,13 @@ body {
   border: none;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out; }
-  .button:hover, .menu:hover, .infoButton:hover, .play:hover, .next:hover, .prev:hover, .settings:hover, .date:hover {
+  .button:hover, .menu:hover, .infoButton:hover, .play:hover, .pause:hover, .next:hover, .prev:hover, .news:hover, .settings:hover, .date:hover {
     opacity: 1;
     text-decoration: none; }
-  .button:focus .button:active, .menu:focus .button:active, .infoButton:focus .button:active, .play:focus .button:active, .next:focus .button:active, .prev:focus .button:active, .settings:focus .button:active, .date:focus .button:active, .button:focus .menu:active, .menu:focus .menu:active, .infoButton:focus .menu:active, .play:focus .menu:active, .next:focus .menu:active, .prev:focus .menu:active, .settings:focus .menu:active, .date:focus .menu:active, .button:focus .infoButton:active, .menu:focus .infoButton:active, .infoButton:focus .infoButton:active, .play:focus .infoButton:active, .next:focus .infoButton:active, .prev:focus .infoButton:active, .settings:focus .infoButton:active, .date:focus .infoButton:active, .button:focus .play:active, .menu:focus .play:active, .infoButton:focus .play:active, .play:focus .play:active, .next:focus .play:active, .prev:focus .play:active, .settings:focus .play:active, .date:focus .play:active, .button:focus .next:active, .menu:focus .next:active, .infoButton:focus .next:active, .play:focus .next:active, .next:focus .next:active, .prev:focus .next:active, .settings:focus .next:active, .date:focus .next:active, .button:focus .prev:active, .menu:focus .prev:active, .infoButton:focus .prev:active, .play:focus .prev:active, .next:focus .prev:active, .prev:focus .prev:active, .settings:focus .prev:active, .date:focus .prev:active, .button:focus .settings:active, .menu:focus .settings:active, .infoButton:focus .settings:active, .play:focus .settings:active, .next:focus .settings:active, .prev:focus .settings:active, .settings:focus .settings:active, .date:focus .settings:active, .button:focus .date:active, .menu:focus .date:active, .infoButton:focus .date:active, .play:focus .date:active, .next:focus .date:active, .prev:focus .date:active, .settings:focus .date:active, .date:focus .date:active {
+  .button:focus .button:active, .menu:focus .button:active, .infoButton:focus .button:active, .play:focus .button:active, .pause:focus .button:active, .next:focus .button:active, .prev:focus .button:active, .news:focus .button:active, .settings:focus .button:active, .date:focus .button:active, .button:focus .menu:active, .menu:focus .menu:active, .infoButton:focus .menu:active, .play:focus .menu:active, .pause:focus .menu:active, .next:focus .menu:active, .prev:focus .menu:active, .news:focus .menu:active, .settings:focus .menu:active, .date:focus .menu:active, .button:focus .infoButton:active, .menu:focus .infoButton:active, .infoButton:focus .infoButton:active, .play:focus .infoButton:active, .pause:focus .infoButton:active, .next:focus .infoButton:active, .prev:focus .infoButton:active, .news:focus .infoButton:active, .settings:focus .infoButton:active, .date:focus .infoButton:active, .button:focus .play:active, .menu:focus .play:active, .infoButton:focus .play:active, .play:focus .play:active, .pause:focus .play:active, .next:focus .play:active, .prev:focus .play:active, .news:focus .play:active, .settings:focus .play:active, .date:focus .play:active, .button:focus .pause:active, .menu:focus .pause:active, .infoButton:focus .pause:active, .play:focus .pause:active, .pause:focus .pause:active, .next:focus .pause:active, .prev:focus .pause:active, .news:focus .pause:active, .settings:focus .pause:active, .date:focus .pause:active, .button:focus .next:active, .menu:focus .next:active, .infoButton:focus .next:active, .play:focus .next:active, .pause:focus .next:active, .next:focus .next:active, .prev:focus .next:active, .news:focus .next:active, .settings:focus .next:active, .date:focus .next:active, .button:focus .prev:active, .menu:focus .prev:active, .infoButton:focus .prev:active, .play:focus .prev:active, .pause:focus .prev:active, .next:focus .prev:active, .prev:focus .prev:active, .news:focus .prev:active, .settings:focus .prev:active, .date:focus .prev:active, .button:focus .news:active, .menu:focus .news:active, .infoButton:focus .news:active, .play:focus .news:active, .pause:focus .news:active, .next:focus .news:active, .prev:focus .news:active, .news:focus .news:active, .settings:focus .news:active, .date:focus .news:active, .button:focus .settings:active, .menu:focus .settings:active, .infoButton:focus .settings:active, .play:focus .settings:active, .pause:focus .settings:active, .next:focus .settings:active, .prev:focus .settings:active, .news:focus .settings:active, .settings:focus .settings:active, .date:focus .settings:active, .button:focus .date:active, .menu:focus .date:active, .infoButton:focus .date:active, .play:focus .date:active, .pause:focus .date:active, .next:focus .date:active, .prev:focus .date:active, .news:focus .date:active, .settings:focus .date:active, .date:focus .date:active {
     opacity: 1;
     background-color: #1b3f3f !important; }
-  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled, .date:disabled {
+  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .pause:disabled, .next:disabled, .prev:disabled, .news:disabled, .settings:disabled, .date:disabled {
     opacity: 0.65;
     pointer-events: none; }
 
@@ -182,14 +182,29 @@ body {
 
 .controlRight {
   height: 6rem;
-  width: 200px;
+  width: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px; }
 
-.infoButton, .play, .next, .prev, .settings {
+.infoButton, .play, .pause, .next, .prev, .news, .settings {
   font-size: 3rem; }
+
+.infoButton i, .play i, .pause i, .news i, .settings i {
+  font-size: 1.3rem !important; }
+
+.play i {
+  position: relative;
+  left: 2px; }
+
+.prev i {
+  position: relative;
+  left: -1px; }
+
+.next i {
+  position: relative;
+  left: 1px; }
 
 .date {
   cursor: default !important;
@@ -233,6 +248,32 @@ body {
 
 .settings {
   font-size: 3rem; }
+
+i {
+  font-size: 1.5rem; }
+
+.svgIcon {
+  padding: 0;
+  display: inline-flex;
+  align-self: center; }
+  .svgIcon svg {
+    width: 0.8em;
+    height: 0.8em; }
+  .svgIcon:hover {
+    color: white;
+    fill: white; }
+  .svgIcon svg path,
+  .svgIcon svg polygon,
+  .svgIcon svg rect {
+    color: white;
+    fill: white; }
+  .svgIcon svg circle {
+    stroke: white;
+    stroke-width: 1; }
+
+.svg-baseline svg {
+  top: .125em;
+  position: relative; }
 
 .bar {
   fill: #5f89ad; }

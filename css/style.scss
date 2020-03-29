@@ -255,16 +255,43 @@ body {
 
 .controlRight {
   height: 6rem;
-  width: 200px;
+  width: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px;
 }
 
-.infoButton, .play, .next, .prev, .settings {
+.infoButton, .play, .pause, .next, .prev, .news, .settings {
   @extend .button;
   font-size: 3rem;
+}
+
+.infoButton, .play , .pause, .news, .settings{
+  & i {
+    font-size: 1.3rem !important;
+  }
+}
+
+.play {
+  & i {
+    position: relative;
+    left: 2px;
+  }
+}
+
+.prev {
+  & i {
+    position: relative;
+    left: -1px;
+  }
+}
+
+.next {
+  & i {
+    position: relative;
+    left: 1px;
+  }
 }
 
 .date {
@@ -272,7 +299,7 @@ body {
   cursor: default !important;
 
   width: 100px !important;
-  
+
   &:hover {
     background-color: $BUTTON_COLOR !important;
   }
@@ -324,10 +351,41 @@ body {
   font-size: 3rem;
 }
 
-
+i {
+  font-size: 1.5rem;
+}
 
 .svgIcon {
+  padding: 0;
+  display: inline-flex;
+  align-self: center;
 
+  & svg {
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  &:hover {
+    color: white;
+    fill: white;
+  }
+
+  svg path,
+  svg polygon,
+  svg rect {
+    color: white;
+    fill: white;
+  }
+
+  svg circle {
+    stroke: white;
+    stroke-width: 1;
+  }
+}
+
+.svg-baseline svg {
+  top: .125em;
+  position: relative;
 }
 
 // —————————————————————————   Controls   ————————————————————————— //
