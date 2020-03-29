@@ -34,6 +34,16 @@ body {
   white-space: nowrap; 
 }
 
+.titleScore {
+  font-size: 0.8rem;
+  font-weight: bold;
+  white-space: nowrap; 
+}
+
+.numbersScore {
+  font-size: 1.3rem;
+}
+
 .article {
   font-size: 1rem;
 }
@@ -183,6 +193,11 @@ hr {
   -o-transition: right .25s ease-out;
   transition: right .25s ease-out;
 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   & a {
     cursor: pointer;
 
@@ -192,6 +207,7 @@ hr {
     opacity: 1;
   }
 }
+
 
 .toggled { 
   display: flex;

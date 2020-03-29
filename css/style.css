@@ -19,6 +19,14 @@ body {
   font-weight: bold;
   white-space: nowrap; }
 
+.titleScore {
+  font-size: 0.8rem;
+  font-weight: bold;
+  white-space: nowrap; }
+
+.numbersScore {
+  font-size: 1.3rem; }
+
 .article {
   font-size: 1rem; }
 
@@ -132,7 +140,11 @@ hr {
   -webkit-transition: right .25s ease-out;
   -moz-transition: right .25s ease-out;
   -o-transition: right .25s ease-out;
-  transition: right .25s ease-out; }
+  transition: right .25s ease-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .settingsMenu a {
     cursor: pointer; }
   .settingsMenu a:hover {
