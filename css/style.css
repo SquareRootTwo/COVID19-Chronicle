@@ -184,7 +184,7 @@ input[type='radio'] {
   margin: 0px;
   padding: 0px;
   right: 2.5rem;
-  top: 10%;
+  top: 10vh;
   height: 60vh;
   width: 15rem;
   border-radius: 15px; }
@@ -210,14 +210,31 @@ input[type='radio'] {
         top: -18rem; } }
 
 .menu {
-  padding: 5px; }
+  padding: 5px;
+  color: whie; }
 
 .content {
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 15px;
   width: auto;
-  height: auto; }
+  height: auto;
+  display: flex;
+  flex-direction: column; }
+  .content hr {
+    border: 0;
+    height: 1px;
+    position: relative;
+    width: 100%;
+    background: white; }
+  .content a {
+    text-decoration: none;
+    text-align: center;
+    color: white !important;
+    padding: 20px 20px 20px 20px; }
+  .content::-webkit-scrollbar {
+    display: none; }
+  .content.example {
+    -ms-overflow-style: none; }
 
 .controls {
   position: absolute;

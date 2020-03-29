@@ -237,9 +237,6 @@ input[type='radio'] {
 
 // —————————————————————————   News   ————————————————————————— //
 
-
-// —————————————————————————   Info   ————————————————————————— //
-
 .info {
   -webkit-transition: right .25s ease-out;
   -moz-transition: right .25s ease-out;
@@ -261,7 +258,7 @@ input[type='radio'] {
   margin: 0px;
   padding: 0px;
   right: 2.5rem;
-  top: 10%;
+  top: 10vh;
   height: 60vh;
   width: 15rem;
 
@@ -300,14 +297,40 @@ input[type='radio'] {
 .menu {
   @extend .button;
   padding: 5px;
+  color: whie;
 }
 
 .content {
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 15px;
+  // padding: 15px;
   width: auto;
   height: auto;
+  display: flex;
+  flex-direction: column;
+
+  & hr {
+    border: 0;
+    height: 1px;
+    position: relative;
+    width: 100%;
+    background: white;
+  }
+
+  & a {
+    text-decoration: none;
+    text-align: center;
+    color: white !important;
+    padding: 20px 20px 20px 20px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.example {
+    -ms-overflow-style: none;
+  }
 }
 
 // —————————————————————————   Controls   ————————————————————————— //
