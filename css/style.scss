@@ -281,6 +281,17 @@ input[type='radio'] {
   height: 80vh;
   width: 15rem;
 
+  & h1 {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  & h3 {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
   -ms-overflow-style: none;
 
   & * {
@@ -290,10 +301,6 @@ input[type='radio'] {
   &::-webkit-scrollbar {
     display: none;
   }
-
-  
-
-  // border: 1px solid $MATCH_2;
   
   border-radius: 15px;
 
@@ -326,15 +333,12 @@ input[type='radio'] {
 }
 
 .newsBoxTile {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-align: center;
-  padding: ;
+  
+
 }
 
 .newsBoxSubtitle {
-  text-align: center;
-  font-size: 0.8rem;
+
 }
 
 .menu {
