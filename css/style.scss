@@ -283,13 +283,15 @@ input[type='radio'] {
 
   -ms-overflow-style: none;
 
+  & * {
+    -ms-overflow-style: none;
+  }
+  
   &::-webkit-scrollbar {
     display: none;
   }
 
-  & * {
-    -ms-overflow-style: none;
-  }
+  
 
   // border: 1px solid $MATCH_2;
   
@@ -321,6 +323,18 @@ input[type='radio'] {
       top: -18rem;
     }
   }
+}
+
+.newsBoxTile {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: ;
+}
+
+.newsBoxSubtitle {
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 .menu {
