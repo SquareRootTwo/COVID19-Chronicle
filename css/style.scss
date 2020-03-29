@@ -318,6 +318,7 @@ input[type='radio'] {
   height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 
   & hr {
     border: 0;
@@ -328,7 +329,6 @@ input[type='radio'] {
   }
 
   & a {
-    text-decoration: none;
     text-align: center;
     color: white !important;
     padding: 20px 20px 20px 20px;
