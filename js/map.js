@@ -80,13 +80,29 @@ function mapOnResize() {
 
 const popUpOpen = function(d) {
     if (!drag) {
+        let country = csvData.find(function(el) {
+            return el.id == d.id
+        });
+
+        let name = country.name;
+        let date = printDate();
+        let infected = country[currentDay+'_i'];
+        let deaths = country[currentDay+'_d'];
+        let recovered = country[currentDay+'_r'];
+
+        let popUpText = "<span class='popup_country'>"+ name + "<br></span>"+
+                    "<span class='popup_date'>" + date + "<br></span>"+
+                    "<span class='popup_infected popup_text'>Infected: <strong>" + infected + "</strong><br></span>"+ 
+                    "<span class='popup_deaths popup_text'>Deaths: <strong>" + deaths + "</strong><br></span>"+ 
+                    "<span class='popup_recovered popup_text'>Recovered: <strong>" + recovered + "</strong></span>";
+
         d3.select("#countryInfo")
             .html("")
             .append('div')
             .classed("popUp", true)
             .style('left', d3.mouse(this)[0] + 'px' )
             .style('top', d3.mouse(this)[1] + 'px')
-            .text(d.properties.name);
+            .html(popUpText);
     }
 }
 
