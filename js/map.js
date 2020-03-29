@@ -1,4 +1,5 @@
 var mapData = d3.map();
+let currentPopupCountry;
 
 const THRESHOLD_POPUP = 400;
 
@@ -111,35 +112,44 @@ function popUpOpen (d) {
             return el.id == d.id
         });
 
-        let name = country.name;
-        let date = printDate();
-        let currentInfected = formatNumber(country[currentDay+'_ci']);
-        let newInfected = formatNumber(country[currentDay+'_ti']);
-        let newDeaths = formatNumber(country[currentDay+'_td']);
-        let totalInfected = formatNumber(country[currentDay+'_i']);
-        let totalDeaths = formatNumber(country[currentDay+'_d']);
-        let totalRecovered = formatNumber(country[currentDay+'_r']);
-
-
-        let popUpText = "<div class='popupHeader'><span class='popupCountry title'>"+ name + "</span>"+
-                    "<span class='popupDate'>" + date + "</span></div>"+
-                    "<hr>"+
-                    "<span class='popupContainer'><div>Currently Infected: </div><div class='popupNumbers'><strong>" + currentInfected + "</strong></div></span>"+ 
-                    "<span class='popupContainer'><div>New Infections: </div><div class='popupNumbers'><strong>" + newInfected + "</strong></div></span>"+ 
-                    "<span class='popupContainer'><div>Deaths Today: </div><div class='popupNumbers'><strong>" + newDeaths + "</strong></div></span>"+
-                    "<hr>"+
-                    "<span class='popupContainer'><div>Total Infected: </div><div class='popupNumbers'><strong>" + totalInfected + "</strong></div></span>"+ 
-                    "<span class='popupContainer'><div>Total Deaths: </div><div class='popupNumbers'><strong>" + totalDeaths + "</strong></div></span>"+ 
-                    "<span class='popupContainer'><div>Total Recovered: </div><div class='popupNumbers'><strong>" + totalRecovered + "</strong></div></span>";
-
+        currentPopupCountry = country;
         d3.select("#countryInfo")
             .html("")
             .append('div')
             .classed("popUp", true)
             // .style('left', getPopUpPosX(d3.mouse(this)[0]))
             // .style('top', getPopUpPosY(d3.mouse(this)[1]))
-            .html(popUpText);
+
+        updatePopup();
     }
+}
+
+function updatePopup() {
+    let country = currentPopupCountry;
+    if(!country) return;
+
+    let name = country.name;
+    let date = printDate();
+    let currentInfected = formatNumber(country[currentDay+'_ci']);
+    let newInfected = formatNumber(country[currentDay+'_ti']);
+    let newDeaths = formatNumber(country[currentDay+'_td']);
+    let totalInfected = formatNumber(country[currentDay+'_i']);
+    let totalDeaths = formatNumber(country[currentDay+'_d']);
+    let totalRecovered = formatNumber(country[currentDay+'_r']);
+
+
+    let popUpText = "<div class='popupHeader'><span class='popupCountry title'>"+ name + "</span>"+
+                "<span class='popupDate'>" + date + "</span></div>"+
+                "<hr>"+
+                "<span class='popupContainer'><div>Currently Infected: </div><div class='popupNumbers'><strong>" + currentInfected + "</strong></div></span>"+ 
+                "<span class='popupContainer'><div>New Infections: </div><div class='popupNumbers'><strong>" + newInfected + "</strong></div></span>"+ 
+                "<span class='popupContainer'><div>Deaths Today: </div><div class='popupNumbers'><strong>" + newDeaths + "</strong></div></span>"+
+                "<hr>"+
+                "<span class='popupContainer'><div>Total Infected: </div><div class='popupNumbers'><strong>" + totalInfected + "</strong></div></span>"+ 
+                "<span class='popupContainer'><div>Total Deaths: </div><div class='popupNumbers'><strong>" + totalDeaths + "</strong></div></span>"+ 
+                "<span class='popupContainer'><div>Total Recovered: </div><div class='popupNumbers'><strong>" + totalRecovered + "</strong></div></span>";
+    
+    document.querySelector(".popUp").innerHTML = popUpText;
 }
 
 function clearPopUp (d) {
@@ -195,6 +205,7 @@ function updateDay() {
         });
     
     document.querySelector(".content").innerHTML = newsOfCurrentDay();
+    updatePopup();
 }
 
 function redraw() {
