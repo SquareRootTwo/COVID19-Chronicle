@@ -1,6 +1,6 @@
 var mapData = d3.map();
 
-const THRESHOLD_POPUP = 50;
+const THRESHOLD_POPUP = 300;
 
 let drag = false;
 
@@ -85,11 +85,11 @@ function getPopUpPosX (mouseX) {
     let x;
     
     if (Math.abs(w - mouseX) < THRESHOLD_POPUP) {
-        x = (mouseX - 300) + 'px';
+        x = (mouseX - 250) + 'px';
     } else {
         x = mouseX + 'px';
     }
-    console.log(x);
+    console.log("x: " + x);
     return x;
 }
 
@@ -97,10 +97,11 @@ function getPopUpPosY (mouseY) {
     let h = window.innerHeight;
     let y;
     if (Math.abs(h - mouseY) < THRESHOLD_POPUP) {
-        y = (mouseY - 300) + 'px';
+        y = (mouseY - 250) + 'px';
     } else {
         y = mouseY + 'px';
     }
+    console.log("y: " + y);
     return y;
 }
 
