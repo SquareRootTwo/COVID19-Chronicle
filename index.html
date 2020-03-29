@@ -77,13 +77,21 @@
     </div>
     
     <div class="settingsMenu" id="settingsMenuContent">
-      <form class="settingsInput" id="settingSelection">
-        <input type="radio" class="radioButton" checked="checked" id="ci" name="settings">
-        <label>Currently Infected</label><br>
-        <input type="radio" class="radioButton" id="ti" name="settings">
-        <label>New Infections</label><br>
-        <input type="radio" class="radioButton" id="ibp" name="settings">
-        <label>Infected by Population</label><br>
+      <form id="settingSelection">
+        <div class="settingsInput">
+          <input type="radio" class="radioButton" checked="checked" id="ci" name="settings">
+          <label>Currently Infected</label>
+        </div>
+        <hr>
+        <div class="settingsInput">
+          <input type="radio" class="radioButton" id="ti" name="settings">
+          <label>New Infections</label>
+        </div>
+        <hr>
+        <div class="settingsInput">
+          <input type="radio" class="radioButton" id="ibp" name="settings">
+          <label>Infected by Population</label>
+        </div>
       </form> 
     </div>
 

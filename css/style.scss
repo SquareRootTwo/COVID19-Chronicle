@@ -195,7 +195,8 @@ hr {
   min-width: 120px;
   height: auto;
 
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   -webkit-transition: right .25s ease-out;
   -moz-transition: right .25s ease-out;
@@ -209,11 +210,23 @@ hr {
 
   & a {
     cursor: pointer;
-
   }
 
   & a:hover {
     opacity: 1;
+  }
+}
+
+.settingsInput {
+  padding: 5px;
+  & label {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  & input {
+    cursor: pointer;
+    margin-left: 10px;
   }
 }
 
@@ -320,7 +333,7 @@ input[type='radio'] {
   flex-direction: column;
   justify-content: flex-start;
 
-  & hr {
+  .hline, hr {
     border: 0;
     height: 1px;
     position: relative;

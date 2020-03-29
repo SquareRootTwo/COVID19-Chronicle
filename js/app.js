@@ -120,7 +120,7 @@ function updateMenuPosition() {
 
   let settingsMenuContent = document.querySelector('#settingsMenuContent');
   settingsMenuContent.style.left = (x - 60) + "px";
-  settingsMenuContent.style.top = (y - 120) + "px";
+  settingsMenuContent.style.top = (y - 160) + "px";
 }
 
 document.getElementById("slider").addEventListener('input', updateSlider, false);

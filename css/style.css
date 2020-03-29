@@ -140,7 +140,8 @@ hr {
   border-radius: 15px;
   min-width: 120px;
   height: auto;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   -webkit-transition: right .25s ease-out;
   -moz-transition: right .25s ease-out;
   -o-transition: right .25s ease-out;
@@ -153,6 +154,15 @@ hr {
     cursor: pointer; }
   .settingsMenu a:hover {
     opacity: 1; }
+
+.settingsInput {
+  padding: 5px; }
+  .settingsInput label {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .settingsInput input {
+    cursor: pointer;
+    margin-left: 10px; }
 
 .toggled {
   display: flex;
@@ -227,7 +237,7 @@ input[type='radio'] {
   flex-direction: column;
   justify-content: flex-start;
   -ms-overflow-style: none; }
-  .content hr {
+  .content .hline, .content hr {
     border: 0;
     height: 1px;
     position: relative;
