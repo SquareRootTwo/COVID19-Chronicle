@@ -62,6 +62,18 @@ function stopAnimation() {
   playButton.dataset['mode'] = 'pause';
 }
 
+function keyAction(event) {
+  console.log("key pressed" + event);
+  let keyID = event.which;
+  if (keyID == 32) {
+    animationControl();
+  } else if (keyID == 39) {
+    increaseDay(1);
+  } else if (keyID == 37) {
+    decreaseDay(1);
+  }
+}
+
 window.onload = () => {
 
   const menuControl = () => {
@@ -72,6 +84,7 @@ window.onload = () => {
   infobarButton.addEventListener('click', menuControl);
   nextButton.addEventListener('click', function(){increaseDay(1);});
   prevButton.addEventListener('click', function(){decreaseDay(1);});
+  document.addEventListener('keydown', keyAction);
 };
 
 document.getElementById("slider").addEventListener('input', updateSlider, false);

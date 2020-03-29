@@ -1,9 +1,5 @@
 var mapData = d3.map();
 
-const STORK_COLOR = "#A3A3A3";
-const STORK_COLOR_HOVER = "#000000";
-const STORK_COLOR_ACTIVE = "#ee8572";
-
 let drag = false;
 
 document.addEventListener('mousedown', () => drag = false);

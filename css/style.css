@@ -27,7 +27,7 @@ body {
     stroke: black !important;
     stroke-width: 2px !important; }
   .country:active {
-    stroke: green !important;
+    stroke: #ee8572 !important;
     stroke-width: 2px !important; }
 
 .popUp {

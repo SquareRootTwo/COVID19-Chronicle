@@ -45,7 +45,7 @@ body {
   }
   
   &:active {
-    stroke: green !important;
+    stroke: $MATCH_1 !important;
     stroke-width: 2px !important;
   }
 }
