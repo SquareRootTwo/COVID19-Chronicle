@@ -148,6 +148,26 @@ window.onload = () => {
   prevButton.addEventListener('click', function(){decreaseDay(1);});
   document.addEventListener('keydown', keyAction);
   window.addEventListener('resize', updateMenuPosition);
+
+  let radioButtons = document.querySelectorAll(".radioButton");
+  for(let rb of radioButtons) {
+    rb.addEventListener('change', function() {
+      if(rb.value == "on" && rb.id !== currentSetting) {
+        currentSetting = rb.id;
+        updateDay();
+        toggleSettingsMenu();
+      }
+    })
+  }
+  // for (var i = 0; i < rad.length; i++) {
+  //     rad[i].addEventListener('change', function() {
+  //         (prev) ? console.log(prev.value): null;
+  //         if (this !== prev) {
+  //             prev = this;
+  //         }
+  //         console.log(this.value)
+  //     });
+  // }
 };
 
 function newsOfCurrentDay() {
@@ -161,4 +181,5 @@ function newsOfCurrentDay() {
 function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
+
 

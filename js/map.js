@@ -234,9 +234,9 @@ let tlast = [0,0],
 function updateDay() {
     //update total numbers
     document.getElementById("slider").value = currentDay;
-    document.querySelector("#scoreConfirmed").innerText = formatNumber(csvData[0][currentDay+'_i']);
-    document.querySelector("#scoreDeaths").innerText = formatNumber(csvData[0][currentDay+'_d']);
-    document.querySelector("#scoreRecovered").innerText = formatNumber(csvData[0][currentDay+'_r']);
+    document.querySelector("#numbersTotalScore").innerText = formatNumber(csvData[0][currentDay+'_i']);
+    document.querySelector("#numbersTotalDeaths").innerText = formatNumber(csvData[0][currentDay+'_d']);
+    document.querySelector("#numbersTotalRecovered").innerText = formatNumber(csvData[0][currentDay+'_r']);
     document.querySelector(".date").innerText = printDate();
 
     //update individual countries
