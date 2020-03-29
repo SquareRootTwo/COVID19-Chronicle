@@ -171,7 +171,7 @@ window.onload = () => {
 };
 
 function newsOfCurrentDay() {
-  let divText = "";
+  let divText = "<h1 class='newsBoxTitle'>Corona Coverage</h1><h3 class=newsBoxSubtitle>New York Times || "+printDate()+"</h3><hr>";
   for(let article of articleData['day_'+currentDay]) {
     divText += "<a target='_blank' href='"+article.url+"' class='boxText headline'>"+article.headline+"</a><hr>";
   }
