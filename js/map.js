@@ -208,5 +208,6 @@ function redraw() {
 }
 
 d3.select("body").on("mousedown", clearPopUp);
+d3.select("body").on("wheel", clearPopUp);
 
 window.addEventListener('resize', mapOnResize);
