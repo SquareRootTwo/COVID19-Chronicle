@@ -89,7 +89,6 @@ function getPopUpPosX (mouseX) {
     } else {
         x = mouseX + 'px';
     }
-    console.log("x: " + x);
     return x;
 }
 
@@ -101,7 +100,6 @@ function getPopUpPosY (mouseY) {
     } else {
         y = mouseY + 'px';
     }
-    console.log("y: " + y);
     return y;
 }
 
@@ -139,6 +137,12 @@ function clearPopUp (d) {
         .classed("popUp", false);
 }
 
+d3.selection.prototype.moveToFront = function() {  
+    return this.each(function(){
+      this.parentNode.appendChild(this);
+    });
+  };
+
 function initMap() {
     d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
         svg.selectAll("path")
@@ -147,6 +151,9 @@ function initMap() {
                 .attr("d", path)
                 .classed("country",true)
                 .on("mouseup", popUpOpen)
+                .on('mouseover', function(d) {
+                    d3.select(this).moveToFront();
+                })
         
         updateDay();
         redraw();       // update path data
