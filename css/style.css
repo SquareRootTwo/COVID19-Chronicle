@@ -203,6 +203,7 @@ body {
     opacity: 1; }
   .timeline::-webkit-slider-thumb {
     -webkit-appearance: none;
+    outline: none;
     appearance: none;
     width: 5px;
     height: 35px;
@@ -215,6 +216,7 @@ body {
     width: 5px;
     height: 50px;
     background: #63b7af;
+    outline: none;
     cursor: pointer; }
 
 .settings {
