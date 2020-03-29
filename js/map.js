@@ -166,14 +166,15 @@ function popUpOpen (d) {
             .style('left', getPopUpPosX(d3.mouse(this)[0]))
             .style('top', getPopUpPosY(d3.mouse(this)[1]))
 
-        updatePopup();
         popupIsOpen = true;
+        updatePopup();
     }
 }
 
 function updatePopup() {
     let country = currentPopupCountry;
     if(!country) return;
+    if(!popupIsOpen) return;
 
     let name = country.name;
     let date = printDate();
