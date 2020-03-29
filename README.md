@@ -7,7 +7,7 @@ Most of the COVID-19 maps published by media companies and researchers focus on 
 COVID Chronicles visualizes the spread of the virus over time and sets these numbers into perspective by providing newspaper articles for each day. This representation provides a more detailed and more understandable overview than raw numbers or existing maps would.
 <br><br>
 The data is provided by John Hopkins CSSE and can be [found on Github](https://github.com/CSSEGISandData/COVID-19). It is updated daily.
-For newspaper articles, COVID Chronicles currently solely relies on articles of the [New York Times](https://www.nytimes.com/). The publication has a global reputation for neutral and detailed coverage of the Corona pandemic. Future versions of COVID Chronicles might include more diverse and localized sources. 
+For newspaper articles, COVID Chronicles currently relies solely on articles by the [New York Times](https://www.nytimes.com/). The publication has a global reputation for neutral and detailed coverage of the Corona pandemic. Future versions of COVID Chronicles might include more diverse and localized sources. 
 <br><br>
 <b>Developed by:</b><br>
 Patrick Züst, ETH Zurich: zuestp@ethz.ch<br>
