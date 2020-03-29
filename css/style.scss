@@ -262,6 +262,16 @@ input[type='radio'] {
   height: 60vh;
   width: 15rem;
 
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & * {
+    -ms-overflow-style: none;
+  }
+
   // border: 1px solid $MATCH_2;
   
   border-radius: 15px;
@@ -322,13 +332,22 @@ input[type='radio'] {
     text-align: center;
     color: white !important;
     padding: 20px 20px 20px 20px;
+    
+    &:hover {
+      color: $BUTTON_COLOR_HOVER !important;
+    }
+    
+    &:active, &:focus {
+      color: $MATCH_1 !important;
+    }
   }
+  -ms-overflow-style: none;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
-  &.example {
+  & * {
     -ms-overflow-style: none;
   }
 }

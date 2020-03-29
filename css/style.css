@@ -187,7 +187,12 @@ input[type='radio'] {
   top: 10vh;
   height: 60vh;
   width: 15rem;
+  -ms-overflow-style: none;
   border-radius: 15px; }
+  .info::-webkit-scrollbar {
+    display: none; }
+  .info * {
+    -ms-overflow-style: none; }
   .info.toggled {
     right: -18rem; }
   @media only screen and (max-width: 768px) {
@@ -219,7 +224,8 @@ input[type='radio'] {
   width: auto;
   height: auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  -ms-overflow-style: none; }
   .content hr {
     border: 0;
     height: 1px;
@@ -231,9 +237,13 @@ input[type='radio'] {
     text-align: center;
     color: white !important;
     padding: 20px 20px 20px 20px; }
+    .content a:hover {
+      color: #347474 !important; }
+    .content a:active, .content a:focus {
+      color: #ee8572 !important; }
   .content::-webkit-scrollbar {
     display: none; }
-  .content.example {
+  .content * {
     -ms-overflow-style: none; }
 
 .controls {
