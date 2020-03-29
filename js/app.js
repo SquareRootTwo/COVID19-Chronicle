@@ -16,7 +16,6 @@ const changeButton = (type) => {
   } else if (type === 'pause'){
     icon.setAttribute('class', 'fas fa-play-circle');
   }
-  console.log(icon);
   playButton.appendChild(icon);
 };
 

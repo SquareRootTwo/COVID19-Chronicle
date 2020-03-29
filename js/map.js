@@ -67,22 +67,29 @@ let svg = d3.selectAll('.map')
         .call(zoom);
 
 let popUpOpen = function(d) {
-    d3.select("countryInfo")
+    d3.select("#countryInfo")
+        .html("")
         .append('div')
-        .attr()
-        .innerText
+        .style('position', 'relative')
+        .style('left', '' + d3.mouse(this)[0] + 'px' )
+        .style('top', '' + d3.mouse(this)[1] + 'px')
+        .classed("popUp", true)
+        .text(d.properties.name);
+
+        console.log(d3.mouse(this)[0]);
+        console.log(mapData.get(d.id));
 
     }
 
 
 function initMap() {
-    console.log("initmap");
     d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
         svg.selectAll("path")
             .data(topo.features)
             .enter().append("path")
                 .attr("d", path)
-                .classed("country",true);
+                .classed("country",true)
+                .on("click", popUpOpen);
         
         updateDay();
         redraw();       // update path data

@@ -30,6 +30,13 @@ body {
     stroke: green !important;
     stroke-width: 2px !important; }
 
+.popUp {
+  background-color: #63b7af;
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  height: 200px; }
+
 .countryActive {
   fill: #000000 !important; }
 
