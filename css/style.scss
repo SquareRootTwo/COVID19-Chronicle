@@ -60,7 +60,7 @@ body {
 
 .country {
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 0.95;
 
   &:hover {
     stroke: $STROKE_COUNTRY !important;
@@ -82,7 +82,7 @@ body {
 .popUp {
   position: absolute;
   background-color: $BACKGROUND_COLOR;
-  opacity: 0.8;
+  opacity: 0.95;
   border-radius: 15px;
   width: auto;
   height: auto;
@@ -90,6 +90,8 @@ body {
   // top: 30px;
 
   padding-bottom: 20px;
+
+  box-shadow: 10px 10px 25px 0px $MATCH_2;
 
   display: flex;
   flex-direction: column;
@@ -142,7 +144,8 @@ hr {
 .score {
   display: flex;
   background-color: $BACKGROUND_COLOR;
-  opacity: 0.8;
+  box-shadow: 10px 10px 25px 0px $MATCH_2;
+  opacity: 0.95;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
@@ -189,8 +192,10 @@ hr {
   position: absolute;
   z-index: 1;
 
+  box-shadow: 10px 10px 25px 0px $MATCH_2;
+
   background-color: $BUTTON_COLOR;
-  opacity: 0.8;
+  opacity: 0.95;
   border-radius: 15px;
   min-width: 120px;
   height: auto;
@@ -263,7 +268,8 @@ input[type='radio'] {
   flex-wrap: nowrap;
 
   background-color: $BACKGROUND_COLOR;
-  opacity: 0.8;
+  box-shadow: 10px 10px 25px 0px $MATCH_2;
+  opacity: 0.95;
 
   overflow-x: hidden;
   overflow-y: scroll;
@@ -272,7 +278,7 @@ input[type='radio'] {
   padding: 0px;
   right: 2.5rem;
   top: 10vh;
-  height: 60vh;
+  height: 80vh;
   width: 15rem;
 
   -ms-overflow-style: none;
@@ -293,7 +299,7 @@ input[type='radio'] {
     right: -18rem;
   }
 
-  @media only screen and (max-width: 768px) { 
+  @media only screen and (max-width: 1220px) { 
     -webkit-transition: top .25s ease-out;
     -moz-transition: top .25s ease-out;
     -o-transition: top .25s ease-out;
@@ -301,14 +307,14 @@ input[type='radio'] {
     
     position: fixed;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
     flex-wrap: nowrap;
   
     left: 20vw;
-    top: 20vh;
-    height: 15rem;
+    top: 35vh;
+    height: 30vh;
     width: 60vw;
   
     &.toggled {
@@ -398,7 +404,8 @@ input[type='radio'] {
   border-radius: 1.5rem;
   outline: 0;
   background-color: $BUTTON_COLOR;
-  opacity: 0.8;
+  box-shadow: 10px 10px 25px 0px $MATCH_2;
+  opacity: 0.85;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -507,8 +514,9 @@ input[type='radio'] {
   height: 5px;
   border-radius: 3px;
   background: #d3d3d3;
+  box-shadow: 10px 10px 25px 0px $MATCH_2;
   outline: none;
-  opacity: 0.7;
+  opacity: 0.85;
   -webkit-transition: .2s;
   transition: opacity .2s;
   position: relative;

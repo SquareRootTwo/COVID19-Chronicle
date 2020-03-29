@@ -38,7 +38,7 @@ body {
 
 .country {
   cursor: pointer;
-  opacity: 0.9; }
+  opacity: 0.95; }
   .country:hover {
     stroke: #838383 !important;
     stroke-width: 2px !important; }
@@ -52,11 +52,12 @@ body {
 .popUp {
   position: absolute;
   background-color: #63b7af;
-  opacity: 0.8;
+  opacity: 0.95;
   border-radius: 15px;
   width: auto;
   height: auto;
   padding-bottom: 20px;
+  box-shadow: 10px 10px 25px 0px #35495e;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -100,7 +101,8 @@ hr {
 .score {
   display: flex;
   background-color: #63b7af;
-  opacity: 0.8;
+  box-shadow: 10px 10px 25px 0px #35495e;
+  opacity: 0.95;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
@@ -135,8 +137,9 @@ hr {
   display: none;
   position: absolute;
   z-index: 1;
+  box-shadow: 10px 10px 25px 0px #35495e;
   background-color: #63b7af;
-  opacity: 0.8;
+  opacity: 0.95;
   border-radius: 15px;
   min-width: 120px;
   height: auto;
@@ -188,14 +191,15 @@ input[type='radio'] {
   align-items: stretch;
   flex-wrap: nowrap;
   background-color: #63b7af;
-  opacity: 0.8;
+  box-shadow: 10px 10px 25px 0px #35495e;
+  opacity: 0.95;
   overflow-x: hidden;
   overflow-y: scroll;
   margin: 0px;
   padding: 0px;
   right: 2.5rem;
   top: 10vh;
-  height: 60vh;
+  height: 80vh;
   width: 15rem;
   -ms-overflow-style: none;
   border-radius: 15px; }
@@ -205,7 +209,7 @@ input[type='radio'] {
     -ms-overflow-style: none; }
   .info.toggled {
     right: -18rem; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1220px) {
     .info {
       -webkit-transition: top .25s ease-out;
       -moz-transition: top .25s ease-out;
@@ -213,13 +217,13 @@ input[type='radio'] {
       transition: top .25s ease-out;
       position: fixed;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       justify-content: flex-start;
       align-items: stretch;
       flex-wrap: nowrap;
       left: 20vw;
-      top: 20vh;
-      height: 15rem;
+      top: 35vh;
+      height: 30vh;
       width: 60vw; }
       .info.toggled {
         top: -18rem; } }
@@ -283,7 +287,8 @@ input[type='radio'] {
   border-radius: 1.5rem;
   outline: 0;
   background-color: #63b7af;
-  opacity: 0.8;
+  box-shadow: 10px 10px 25px 0px #35495e;
+  opacity: 0.85;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -355,8 +360,9 @@ input[type='radio'] {
   height: 5px;
   border-radius: 3px;
   background: #d3d3d3;
+  box-shadow: 10px 10px 25px 0px #35495e;
   outline: none;
-  opacity: 0.7;
+  opacity: 0.85;
   -webkit-transition: .2s;
   transition: opacity .2s;
   position: relative;
