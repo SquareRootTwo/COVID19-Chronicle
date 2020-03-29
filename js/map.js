@@ -190,6 +190,8 @@ function updateDay() {
             let total = mapData.get(d.id) || 0;
             return getColor(total);
         });
+    
+    document.querySelector(".content").innerHTML = newsOfCurrentDay();
 }
 
 function redraw() {

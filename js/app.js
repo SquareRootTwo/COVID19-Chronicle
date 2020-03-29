@@ -106,3 +106,11 @@ function printDate() {
   return (`${da} ${mo} ${ye}`);
 }
 
+function newsOfCurrentDay() {
+  let divText = "";
+  for(let article of articleData['day_'+currentDay]) {
+    divText += "<a target='_blank' href='"+article.url+"' class='boxText headline'>"+article.headline+"</a><br><hr>";
+  }
+  return divText;
+}
+
