@@ -169,3 +169,5 @@ function redraw() {
     svg.selectAll('path')       // re-project path data
         .attr('d', path)
 }
+
+window.addEventListener('resize', mapOnResize);

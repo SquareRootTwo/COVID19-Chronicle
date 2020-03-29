@@ -91,4 +91,3 @@ function printDate() {
   return (`${da} ${mo} ${ye}`);
 }
 
-window.addEventListener('resize', mapOnResize);
