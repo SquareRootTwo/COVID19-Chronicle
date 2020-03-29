@@ -4,8 +4,17 @@ const STORK_COLOR = "#A3A3A3";
 const STORK_COLOR_HOVER = "#000000";
 const STORK_COLOR_ACTIVE = "#ee8572";
 
+let drag = false;
+
+document.addEventListener('mousedown', () => drag = false);
+document.addEventListener('mousemove', () => drag = true);
+
 const getColor = (cases) => {
-    if (cases > 10000) {
+    if (cases > 100000) {
+        return "#9E2A2A";
+    } else if (cases > 50000) {
+        return "#C14040";
+    } else if (cases > 10000) {
         return "#F55050";
     } else if (cases > 5000) {
         return "#F57150";
@@ -73,21 +82,23 @@ function mapOnResize() {
     document.querySelector("svg").setAttribute("height",height);
 }
 
-let popUpOpen = function(d) {
+const popUpOpen = function(d) {
+    if (!drag) {
+        d3.select("#countryInfo")
+            .html("")
+            .append('div')
+            .classed("popUp", true)
+            .style('left', d3.mouse(this)[0] + 'px' )
+            .style('top', d3.mouse(this)[1] + 'px')
+            .text(d.properties.name);
+    }
+}
+
+const clearPopUp = function(d) {
     d3.select("#countryInfo")
         .html("")
-        .append('div')
-        .style('position', 'relative')
-        .style('left', '' + d3.mouse(this)[0] + 'px' )
-        .style('top', '' + d3.mouse(this)[1] + 'px')
-        .classed("popUp", true)
-        .text(d.properties.name);
-
-        console.log(d3.mouse(this)[0]);
-        console.log(mapData.get(d.id));
-
-    }
-
+        .classed("popUp", false);
+}
 
 function initMap() {
     d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
@@ -96,7 +107,8 @@ function initMap() {
             .enter().append("path")
                 .attr("d", path)
                 .classed("country",true)
-                .on("click", popUpOpen);
+                .on("mouseup", popUpOpen)
+                .on("mousedown", clearPopUp)
         
         updateDay();
         redraw();       // update path data

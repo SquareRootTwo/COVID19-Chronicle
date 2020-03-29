@@ -51,7 +51,9 @@ body {
 }
 
 .popUp {
+  position: absolute;
   background-color: $BACKGROUND_COLOR;
+  opacity: 0.8;
   border-radius: 15px;
   padding: 20px;
   width: 200px;
@@ -76,7 +78,7 @@ body {
 .score {
   display: flex;
   background-color: $BACKGROUND_COLOR;
-  // border: solid 1px $MATCH_2;
+  opacity: 0.8;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
@@ -111,6 +113,7 @@ body {
   flex-wrap: nowrap;
 
   background-color: $BACKGROUND_COLOR;
+  opacity: 0.8;
 
   overflow-x: hidden;
   overflow-y: scroll;

@@ -31,7 +31,9 @@ body {
     stroke-width: 2px !important; }
 
 .popUp {
+  position: absolute;
   background-color: #63b7af;
+  opacity: 0.8;
   border-radius: 15px;
   padding: 20px;
   width: 200px;
@@ -51,6 +53,7 @@ body {
 .score {
   display: flex;
   background-color: #63b7af;
+  opacity: 0.8;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
@@ -77,6 +80,7 @@ body {
   align-items: stretch;
   flex-wrap: nowrap;
   background-color: #63b7af;
+  opacity: 0.8;
   overflow-x: hidden;
   overflow-y: scroll;
   margin: 0px;
