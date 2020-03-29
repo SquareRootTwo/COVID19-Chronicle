@@ -1,5 +1,7 @@
 var mapData = d3.map();
 
+const THRESHOLD_POPUP = 50;
+
 let drag = false;
 
 document.addEventListener('mousedown', () => drag = false);
@@ -78,19 +80,43 @@ function mapOnResize() {
     document.querySelector("svg").setAttribute("height",height);
 }
 
-const popUpOpen = function(d) {
+function getPopUpPosX (mouseX) {
+    let w = window.innerWidth;
+    let x;
+    
+    if (Math.abs(w - mouseX) < THRESHOLD_POPUP) {
+        x = (mouseX - 300) + 'px';
+    } else {
+        x = mouseX + 'px';
+    }
+    console.log(x);
+    return x;
+}
+
+function getPopUpPosY (mouseY) {
+    let h = window.innerHeight;
+    let y;
+    if (Math.abs(h - mouseY) < THRESHOLD_POPUP) {
+        y = (mouseY - 300) + 'px';
+    } else {
+        y = mouseY + 'px';
+    }
+    return y;
+}
+
+function popUpOpen (d) {
     if (!drag) {
         d3.select("#countryInfo")
             .html("")
             .append('div')
             .classed("popUp", true)
-            .style('left', d3.mouse(this)[0] + 'px' )
-            .style('top', d3.mouse(this)[1] + 'px')
+            .style('left', getPopUpPosX(d3.mouse(this)[0]))
+            .style('top', getPopUpPosY(d3.mouse(this)[1]))
             .text(d.properties.name);
     }
 }
 
-const clearPopUp = function(d) {
+function clearPopUp (d) {
     d3.select("#countryInfo")
         .html("")
         .classed("popUp", false);
