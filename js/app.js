@@ -62,8 +62,11 @@ function stopAnimation() {
   playButton.dataset['mode'] = 'pause';
 }
 
+function menuControl() {
+  infobar.classList.toggle('toggled');
+};
+
 function keyAction(event) {
-  console.log("key pressed" + event);
   let keyID = event.which;
   if (keyID == 32) {
     animationControl();
@@ -71,15 +74,14 @@ function keyAction(event) {
     increaseDay(1);
   } else if (keyID == 37) {
     decreaseDay(1);
+  } else if (keyID == 27) {
+    decreaseDay(currentDay);
+  } else if (keyID == 73) {
+    menuControl();
   }
 }
 
 window.onload = () => {
-
-  const menuControl = () => {
-    infobar.classList.toggle('toggled');
-  };
-
   playButton.addEventListener('click', animationControl);
   infobarButton.addEventListener('click', menuControl);
   nextButton.addEventListener('click', function(){increaseDay(1);});

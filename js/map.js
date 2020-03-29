@@ -104,7 +104,6 @@ function initMap() {
                 .attr("d", path)
                 .classed("country",true)
                 .on("mouseup", popUpOpen)
-                .on("mousedown", clearPopUp)
         
         updateDay();
         redraw();       // update path data
@@ -165,5 +164,7 @@ function redraw() {
     svg.selectAll('path')       // re-project path data
         .attr('d', path)
 }
+
+d3.select("body").on("mousedown", clearPopUp);
 
 window.addEventListener('resize', mapOnResize);
