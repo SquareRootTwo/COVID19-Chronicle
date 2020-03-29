@@ -24,7 +24,7 @@ body {
   cursor: pointer;
   opacity: 0.9; }
   .country:hover {
-    stroke: black !important;
+    stroke: #838383 !important;
     stroke-width: 2px !important; }
   .country:active {
     stroke: #ee8572 !important;
@@ -47,7 +47,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 75px;
+  height: 100px;
   top: 30px; }
 
 .score {
@@ -58,12 +58,22 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  height: 75px;
-  width: 450px;
+  height: 100px;
+  width: auto;
   overflow-x: hidden;
   overflow-y: hidden; }
 
+.vline {
+  border-left: 1px solid white;
+  height: 100px; }
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap; }
+
 .confirmed, .deaths, .recovered {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -132,29 +142,34 @@ body {
   align-items: center;
   flex-wrap: nowrap; }
 
-.button, .menu, .infoButton, .play, .next, .prev, .settings {
-  display: inline-block;
-  color: #63b7af;
+.button, .menu, .infoButton, .play, .next, .prev, .settings, .date {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  outline: 0;
+  background-color: #63b7af;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   vertical-align: middle;
-  outline: 0;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: transparent;
   border: none;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out; }
-  .button:hover, .menu:hover, .infoButton:hover, .play:hover, .next:hover, .prev:hover, .settings:hover {
-    color: #347474;
+  .button:hover, .menu:hover, .infoButton:hover, .play:hover, .next:hover, .prev:hover, .settings:hover, .date:hover {
+    opacity: 1;
     text-decoration: none; }
-  .button:focus, .menu:focus, .infoButton:focus, .play:focus, .next:focus, .prev:focus, .settings:focus {
-    box-shadow: 0 0 0 0.2rem #1b3f3f; }
-  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled {
-    opacity: 0.65; }
-  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled {
+  .button:focus .button:active, .menu:focus .button:active, .infoButton:focus .button:active, .play:focus .button:active, .next:focus .button:active, .prev:focus .button:active, .settings:focus .button:active, .date:focus .button:active, .button:focus .menu:active, .menu:focus .menu:active, .infoButton:focus .menu:active, .play:focus .menu:active, .next:focus .menu:active, .prev:focus .menu:active, .settings:focus .menu:active, .date:focus .menu:active, .button:focus .infoButton:active, .menu:focus .infoButton:active, .infoButton:focus .infoButton:active, .play:focus .infoButton:active, .next:focus .infoButton:active, .prev:focus .infoButton:active, .settings:focus .infoButton:active, .date:focus .infoButton:active, .button:focus .play:active, .menu:focus .play:active, .infoButton:focus .play:active, .play:focus .play:active, .next:focus .play:active, .prev:focus .play:active, .settings:focus .play:active, .date:focus .play:active, .button:focus .next:active, .menu:focus .next:active, .infoButton:focus .next:active, .play:focus .next:active, .next:focus .next:active, .prev:focus .next:active, .settings:focus .next:active, .date:focus .next:active, .button:focus .prev:active, .menu:focus .prev:active, .infoButton:focus .prev:active, .play:focus .prev:active, .next:focus .prev:active, .prev:focus .prev:active, .settings:focus .prev:active, .date:focus .prev:active, .button:focus .settings:active, .menu:focus .settings:active, .infoButton:focus .settings:active, .play:focus .settings:active, .next:focus .settings:active, .prev:focus .settings:active, .settings:focus .settings:active, .date:focus .settings:active, .button:focus .date:active, .menu:focus .date:active, .infoButton:focus .date:active, .play:focus .date:active, .next:focus .date:active, .prev:focus .date:active, .settings:focus .date:active, .date:focus .date:active {
+    opacity: 1;
+    background-color: #1b3f3f !important; }
+  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .next:disabled, .prev:disabled, .settings:disabled, .date:disabled {
+    opacity: 0.65;
     pointer-events: none; }
 
 .controlLeft {
@@ -173,17 +188,14 @@ body {
   align-items: center;
   margin: 10px; }
 
-.infoButton {
+.infoButton, .play, .next, .prev, .settings {
   font-size: 3rem; }
 
-.play {
-  font-size: 3rem; }
-
-.next {
-  font-size: 3rem; }
-
-.prev {
-  font-size: 3rem; }
+.date {
+  cursor: default !important;
+  width: 100px !important; }
+  .date:hover {
+    background-color: #63b7af !important; }
 
 .timeline {
   -webkit-appearance: none;
@@ -221,27 +233,6 @@ body {
 
 .settings {
   font-size: 3rem; }
-
-.dateContainer {
-  width: 100px;
-  height: 66px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.date {
-  position: relative !important;
-  bottom: 2px !important;
-  right: 2px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  margin: 0px;
-  width: 100px;
-  height: 46px;
-  background-color: #63b7af;
-  border-radius: 1.5rem; }
 
 .bar {
   fill: #5f89ad; }

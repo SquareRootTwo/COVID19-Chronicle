@@ -40,7 +40,7 @@ body {
   opacity: 0.9;
 
   &:hover {
-    stroke: black !important;
+    stroke: $STROKE_COUNTRY !important;
     stroke-width: 2px !important;
   }
   
@@ -71,7 +71,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 75px;
+  height: 100px;
   top: 30px;
 }
 
@@ -84,14 +84,26 @@ body {
   align-items: center;
   flex-wrap: nowrap;
 
-  height: 75px;
-  width: 450px;
+  height: 100px;
+  width: auto;
 
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
+.vline {
+  border-left: 1px solid $FONT_COLOR;
+  height: 100px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap; 
+}
+
 .confirmed, .deaths, .recovered {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -185,43 +197,49 @@ body {
 }
 
 .button {
-  display: inline-block;
-  color: $BUTTON_COLOR;
+
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  outline: 0;
+  background-color: $BUTTON_COLOR;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   text-align: center;
   vertical-align: middle;
-  outline: 0;
 
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: transparent;
   border: none;
 
   -webkit-transition: color 0.15s ease-in-out, 
   background-color 0.15s ease-in-out, 
   border-color 0.15s ease-in-out, 
   box-shadow 0.15s ease-in-out;
+  
   transition: color 0.15s ease-in-out, 
   background-color 0.15s ease-in-out, 
   border-color 0.15s ease-in-out, 
   box-shadow 0.15s ease-in-out;
 
   &:hover {
-    color: $BUTTON_COLOR_HOVER;
+    opacity: 1;
     text-decoration: none;
   }
-
-  &:focus {
-    box-shadow: 0 0 0 0.2rem $BUTTON_COLOR_ACTIVE;
+  
+  &:focus &:active {
+    opacity: 1;
+    background-color: $BUTTON_COLOR_ACTIVE !important;
   }
 
   &:disabled {
     opacity: 0.65;
-  }
-
-  &:disabled {
     pointer-events: none;
   }
 }
@@ -244,26 +262,21 @@ body {
   margin: 10px;
 }
 
-.infoButton {
+.infoButton, .play, .next, .prev, .settings {
   @extend .button;
   font-size: 3rem;
 }
 
-.play {
+.date {
   @extend .button;
-  font-size: 3rem;
-}
+  cursor: default !important;
 
-.next {
-  @extend .button;
-  font-size: 3rem;
+  width: 100px !important;
+  
+  &:hover {
+    background-color: $BUTTON_COLOR !important;
+  }
 }
-
-.prev {
-  @extend .button;
-  font-size: 3rem;
-}
-
 
 .timeline {
   -webkit-appearance: none;
@@ -311,27 +324,10 @@ body {
   font-size: 3rem;
 }
 
-.dateContainer {
-  width: 100px;
-  height: 66px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.date {
-  position: relative !important;
-  bottom: 2px !important;
-  right: 2px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  margin: 0px;
-  width: 100px;
-  height: 46px;
-  background-color: $BUTTON_COLOR;
-  border-radius: 1.5rem;
+
+.svgIcon {
+
 }
 
 // —————————————————————————   Controls   ————————————————————————— //

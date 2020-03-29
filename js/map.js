@@ -170,7 +170,7 @@ function updateDay() {
     document.querySelector("#scoreConfirmed").innerText = csvData[0][currentDay+'_i'];
     document.querySelector("#scoreDeaths").innerText = csvData[0][currentDay+'_d'];
     document.querySelector("#scoreRecovered").innerText = csvData[0][currentDay+'_r'];
-    document.querySelector(".date").innerText = printDate();
+    document.querySelector("#currentDate").innerText = printDate();
 
     //update individual countries
     csvData.forEach(function(entry) {

@@ -21,15 +21,17 @@
     <div class="header">
       <div class="score">
         <div class="confirmed">
-          <div class="title">Confirmed:</div>
+          <div class="title">Total Confirmed:</div>
           <div id="scoreConfirmed">0</div>
         </div>
+        <div class="vline"></div>
         <div class="deaths">
-          <div class="title">Deaths:</div>
+          <div class="title">Total Deaths:</div>
           <div id="scoreDeaths">0</div>
         </div>
+        <div class="vline"></div>
         <div class="recovered">
-          <div class="title">Recovered:</div>
+          <div class="title">Total Recovered:</div>
           <div id="scoreRecovered">0</div>
         </div>
       </div>
@@ -55,28 +57,26 @@
     <div class="controls">
       <div class="controlLeft">
         <a class="play" id="playButton" data-mode="pause">
-          <i class="fas fa-play-circle"></i>
+          <!-- <i class="fas fa-play-circle"></i> -->
         </a>
         <a class="prev" id="prevButton">
-          <i class="fas fa-chevron-circle-left"></i>
+          <!-- <i class="fas fa-chevron-circle-left"></i> -->
         </a>
         <a class="next" id="nextButton">
-          <i class="fas fa-chevron-circle-right"></i>
+          <!-- <i class="fas fa-chevron-circle-right"></i> -->
         </a>
       </div>
       <div class="">
         <input class="timeline" type="range" id="slider" name="vol" min="0" onchange="updateSlider(this.value)">
       </div>
       <div class="controlRight">
-        <div class="dateContainer">
-          <div class="date">
-          </div>
+        <div class="date" id="currentDate">
         </div>
         <a class="settings">
-          <i class="fas fa-compass"></i>
+          <!-- <i class="fas fa-compass"></i> -->
         </a>
         <a class="infoButton" id="infobarButton">
-          <i class="fas fa-info-circle"></i>
+          <!-- <i class="fas fa-info-circle"></i> -->
         </a>  
       </div>
 
