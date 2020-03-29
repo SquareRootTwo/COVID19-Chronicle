@@ -111,15 +111,24 @@ function popUpOpen (d) {
 
         let name = country.name;
         let date = printDate();
-        let infected = country[currentDay+'_i'];
-        let deaths = country[currentDay+'_d'];
-        let recovered = country[currentDay+'_r'];
+        let currentInfected = country[currentDay+'_ci'];
+        let newInfected = country[currentDay+'_ti'];
+        let newDeaths = country[currentDay+'_td'];
+        let totalInfected = country[currentDay+'_i'];
+        let totalDeaths = country[currentDay+'_d'];
+        let totalRecovered = country[currentDay+'_r'];
+
 
         let popUpText = "<span class='popup_country'>"+ name + "<br></span>"+
                     "<span class='popup_date'>" + date + "<br></span>"+
-                    "<span class='popup_infected popup_text'>Infected: <strong>" + infected + "</strong><br></span>"+ 
-                    "<span class='popup_deaths popup_text'>Deaths: <strong>" + deaths + "</strong><br></span>"+ 
-                    "<span class='popup_recovered popup_text'>Recovered: <strong>" + recovered + "</strong></span>";
+                    "<hr>"+
+                    "<span class='popup_infected popup_text'>Currently Infected: <strong>" + currentInfected + "</strong><br></span>"+ 
+                    "<span class='popup_deaths popup_text'>New Infections: <strong>" + newInfected + "</strong><br></span>"+ 
+                    "<span class='popup_recovered popup_text'>Deaths Today: <strong>" + newDeaths + "</strong></span>"+
+                    "<hr>"+
+                    "<span class='popup_infected popup_text'>Total Infected: <strong>" + totalInfected + "</strong><br></span>"+ 
+                    "<span class='popup_deaths popup_text'>Total Deaths: <strong>" + totalDeaths + "</strong><br></span>"+ 
+                    "<span class='popup_recovered popup_text'>Total Recovered: <strong>" + totalRecovered + "</strong></span>";
 
         d3.select("#countryInfo")
             .html("")
@@ -144,7 +153,7 @@ d3.selection.prototype.moveToFront = function() {
   };
 
 function initMap() {
-    d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
+    d3.json("https://raw.githubusercontent.com/SquareRootTwo/COVID19-Chronicle/master/data/world-110m.json", function ready(error, topo) {  
         svg.selectAll("path")
             .data(topo.features)
             .enter().append("path")
@@ -174,7 +183,7 @@ function updateDay() {
 
     //update individual countries
     csvData.forEach(function(entry) {
-        mapData.set(entry.id, entry[currentDay+'_i']);
+        mapData.set(entry.id, entry[currentDay+'_ci']);
     });
     svg.selectAll("path").transition()
         .style("fill", function (d){
