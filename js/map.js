@@ -111,12 +111,12 @@ function popUpOpen (d) {
 
         let name = country.name;
         let date = printDate();
-        let currentInfected = country[currentDay+'_ci'];
-        let newInfected = country[currentDay+'_ti'];
-        let newDeaths = country[currentDay+'_td'];
-        let totalInfected = country[currentDay+'_i'];
-        let totalDeaths = country[currentDay+'_d'];
-        let totalRecovered = country[currentDay+'_r'];
+        let currentInfected = formatNumber(country[currentDay+'_ci']);
+        let newInfected = formatNumber(country[currentDay+'_ti']);
+        let newDeaths = formatNumber(country[currentDay+'_td']);
+        let totalInfected = formatNumber(country[currentDay+'_i']);
+        let totalDeaths = formatNumber(country[currentDay+'_d']);
+        let totalRecovered = formatNumber(country[currentDay+'_r']);
 
 
         let popUpText = "<span class='popup_country'>"+ name + "<br></span>"+
@@ -176,9 +176,9 @@ let tlast = [0,0],
 function updateDay() {
     //update total numbers
     document.getElementById("slider").value = currentDay;
-    document.querySelector("#scoreConfirmed").innerText = csvData[0][currentDay+'_i'];
-    document.querySelector("#scoreDeaths").innerText = csvData[0][currentDay+'_d'];
-    document.querySelector("#scoreRecovered").innerText = csvData[0][currentDay+'_r'];
+    document.querySelector("#scoreConfirmed").innerText = formatNumber(csvData[0][currentDay+'_i']);
+    document.querySelector("#scoreDeaths").innerText = formatNumber(csvData[0][currentDay+'_d']);
+    document.querySelector("#scoreRecovered").innerText = formatNumber(csvData[0][currentDay+'_r']);
     document.querySelector(".date").innerText = printDate();
 
     //update individual countries
