@@ -1,6 +1,6 @@
 var mapData = d3.map();
 
-const THRESHOLD_POPUP = 300;
+const THRESHOLD_POPUP = 400;
 
 let drag = false;
 
@@ -89,6 +89,7 @@ function getPopUpPosX (mouseX) {
     } else {
         x = mouseX + 'px';
     }
+    popUpPosition.x = x;
     return x;
 }
 
@@ -100,6 +101,7 @@ function getPopUpPosY (mouseY) {
     } else {
         y = mouseY + 'px';
     }
+    popUpPosition.y = y;
     return y;
 }
 
@@ -119,23 +121,23 @@ function popUpOpen (d) {
         let totalRecovered = country[currentDay+'_r'];
 
 
-        let popUpText = "<span class='popup_country'>"+ name + "<br></span>"+
-                    "<span class='popup_date'>" + date + "<br></span>"+
+        let popUpText = "<div class='popupHeader'><span class='popupCountry title'>"+ name + "</span>"+
+                    "<span class='popupDate'>" + date + "</span></div>"+
                     "<hr>"+
-                    "<span class='popup_infected popup_text'>Currently Infected: <strong>" + currentInfected + "</strong><br></span>"+ 
-                    "<span class='popup_deaths popup_text'>New Infections: <strong>" + newInfected + "</strong><br></span>"+ 
-                    "<span class='popup_recovered popup_text'>Deaths Today: <strong>" + newDeaths + "</strong></span>"+
+                    "<span class='popupContainer'><div>Currently Infected: </div><div class='popupNumbers'><strong>" + currentInfected + "</strong></div></span>"+ 
+                    "<span class='popupContainer'><div>New Infections: </div><div class='popupNumbers'><strong>" + newInfected + "</strong></div></span>"+ 
+                    "<span class='popupContainer'><div>Deaths Today: </div><div class='popupNumbers'><strong>" + newDeaths + "</strong></div></span>"+
                     "<hr>"+
-                    "<span class='popup_infected popup_text'>Total Infected: <strong>" + totalInfected + "</strong><br></span>"+ 
-                    "<span class='popup_deaths popup_text'>Total Deaths: <strong>" + totalDeaths + "</strong><br></span>"+ 
-                    "<span class='popup_recovered popup_text'>Total Recovered: <strong>" + totalRecovered + "</strong></span>";
+                    "<span class='popupContainer'><div>Total Infected: </div><div class='popupNumbers'><strong>" + totalInfected + "</strong></div></span>"+ 
+                    "<span class='popupContainer'><div>Total Deaths: </div><div class='popupNumbers'><strong>" + totalDeaths + "</strong></div></span>"+ 
+                    "<span class='popupContainer'><div>Total Recovered: </div><div class='popupNumbers'><strong>" + totalRecovered + "</strong></div></span>";
 
         d3.select("#countryInfo")
             .html("")
             .append('div')
             .classed("popUp", true)
-            .style('left', getPopUpPosX(d3.mouse(this)[0]))
-            .style('top', getPopUpPosY(d3.mouse(this)[1]))
+            // .style('left', getPopUpPosX(d3.mouse(this)[0]))
+            // .style('top', getPopUpPosY(d3.mouse(this)[1]))
             .html(popUpText);
     }
 }
@@ -145,6 +147,7 @@ function clearPopUp (d) {
         .html("")
         .classed("popUp", false);
 }
+
 
 d3.selection.prototype.moveToFront = function() {  
     return this.each(function(){
@@ -224,7 +227,7 @@ function redraw() {
         .attr('d', path)
 }
 
-d3.select("body").on("mousedown", clearPopUp);
-d3.select("body").on("wheel", clearPopUp);
+// d3.select("body").on("mousedown", clearPopUp);
+// d3.select("body").on("wheel", clearPopUp);
 
 window.addEventListener('resize', mapOnResize);

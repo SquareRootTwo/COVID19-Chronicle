@@ -7,6 +7,7 @@ const nextDay = document.querySelector('#nextButton');
 const prevDay = document.querySelector('#prevButton');
 const infobar = document.querySelector('#infobar');
 const infobarButton = document.querySelector('#infobarButton');
+const settingsButton = document.querySelector('#settingsButton');
 
 const changeButton = (type) => {
   playButton.innerHTML = "";
@@ -83,13 +84,44 @@ function keyAction(event) {
   }
 }
 
-window.onload = () => {
-  playButton.addEventListener('click', animationControl);
-  infobarButton.addEventListener('click', menuControl);
-  nextButton.addEventListener('click', function(){increaseDay(1);});
-  prevButton.addEventListener('click', function(){decreaseDay(1);});
-  document.addEventListener('keydown', keyAction);
-};
+function getPosition(el) {
+  var xPos = 0;
+  var yPos = 0;
+ 
+  while (el) {
+    if (el.tagName == "BODY") {
+      // deal with browser quirks with body/window/document and page scroll
+      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+      var yScroll = el.scrollTop || document.documentElement.scrollTop;
+ 
+      xPos += (el.offsetLeft - xScroll + el.clientLeft);
+      yPos += (el.offsetTop - yScroll + el.clientTop);
+    } else {
+      // for all other non-BODY elements
+      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+ 
+    el = el.offsetParent;
+  }
+  return {
+    x: xPos,
+    y: yPos
+  };
+}
+
+function toggleSettingsMenu() {
+  updateMenuPosition();
+  settingsMenuContent.classList.toggle('toggled');
+}
+
+function updateMenuPosition() {
+  let {x, y} = getPosition(settingsButton);
+
+  let settingsMenuContent = document.querySelector('#settingsMenuContent');
+  settingsMenuContent.style.left = (x - 60) + "px";
+  settingsMenuContent.style.top = (y - 120) + "px";
+}
 
 document.getElementById("slider").addEventListener('input', updateSlider, false);
 
@@ -108,3 +140,12 @@ function printDate() {
   return (`${da} ${mo} ${ye}`);
 }
 
+window.onload = () => {
+  playButton.addEventListener('click', animationControl);
+  infobarButton.addEventListener('click', menuControl);
+  settingsButton.addEventListener('click', toggleSettingsMenu);
+  nextButton.addEventListener('click', function(){increaseDay(1);});
+  prevButton.addEventListener('click', function(){decreaseDay(1);});
+  document.addEventListener('keydown', keyAction);
+  window.addEventListener('resize', updateMenuPosition);
+};

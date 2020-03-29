@@ -15,8 +15,7 @@
     <div class="map">
     </div>
 
-    <div id="countryInfo">
-    </div>
+    <div id="countryInfo"></div>
 
     <div class="header">
       <div class="score">
@@ -58,7 +57,6 @@
       <div class="controlLeft">
         <a class="play" id="playButton" data-mode="pause">
           <i class="fas fa-play"></i>
-          <!-- <i class="fas fa-play-circle"></i> -->
         </a>
         <a class="prev" id="prevButton">
           <i class="fas fa-chevron-left"></i>
@@ -73,7 +71,7 @@
       <div class="controlRight">
         <div class="date" id="currentDate">
         </div>
-        <a class="settings">
+        <a class="settings" id="settingsButton">
           <i class="fas fa-sliders-h"></i>
         </a>
         <a class="news">
@@ -83,9 +81,14 @@
           <i class="fas fa-info"></i>
         </a>  
       </div>
-
     </div>
     
+    <div class="settingsMenu" id="settingsMenuContent">
+      <a class="">Setting 1</a>
+      <a class="">Setting 2</a>
+      <a class="">Setting 3</a>
+    </div>
+
     <script src="js/app.js"></script>
     <script src="js/map.js"></script>
     <script src="js/getData.js"></script>
