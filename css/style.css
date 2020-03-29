@@ -142,7 +142,7 @@ hr {
   opacity: 0.95;
   border-radius: 15px;
   min-width: 120px;
-  height: auto;
+  height: 129px;
   padding-top: 10px;
   padding-bottom: 10px;
   -webkit-transition: right .25s ease-out;
@@ -180,7 +180,7 @@ input[type='radio'] {
   text-align: center;
   padding: 10px; }
 
-.info {
+.newsfeed {
   -webkit-transition: right .25s ease-out;
   -moz-transition: right .25s ease-out;
   -o-transition: right .25s ease-out;
@@ -201,23 +201,18 @@ input[type='radio'] {
   top: 10vh;
   height: 80vh;
   width: 15rem;
-  -ms-overflow-style: none;
   border-radius: 15px; }
-  .info h1 {
+  .newsfeed h1 {
     text-align: center;
     font-weight: bold; }
-  .info h3 {
+  .newsfeed h3 {
     margin-top: 0px;
     text-align: center;
     font-size: 0.8rem; }
-  .info * {
-    -ms-overflow-style: none; }
-  .info::-webkit-scrollbar {
-    display: none; }
-  .info.toggled {
+  .newsfeed.toggled {
     right: -18rem; }
   @media only screen and (max-width: 1220px) {
-    .info {
+    .newsfeed {
       -webkit-transition: top .25s ease-out;
       -moz-transition: top .25s ease-out;
       -o-transition: top .25s ease-out;
@@ -232,7 +227,7 @@ input[type='radio'] {
       top: 35vh;
       height: 30vh;
       width: 60vw; }
-      .info.toggled {
+      .newsfeed.toggled {
         top: -18rem; } }
 
 .menu {
@@ -267,6 +262,43 @@ input[type='radio'] {
   .content * {
     -ms-overflow-style: none; }
 
+.infoMenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 10px 10px 25px 0px #35495e;
+  background-color: #63b7af;
+  opacity: 0.95;
+  border-radius: 15px;
+  min-width: 220px;
+  height: 129px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-transition: right .25s ease-out;
+  -moz-transition: right .25s ease-out;
+  -o-transition: right .25s ease-out;
+  transition: right .25s ease-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .infoMenu a {
+    cursor: pointer; }
+  .infoMenu a:hover {
+    opacity: 1; }
+
+.infoMenuContent {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 20px; }
+
+.toggled {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left; }
+
 .controls {
   position: absolute;
   bottom: 15px;
@@ -288,7 +320,7 @@ input[type='radio'] {
       .controls div {
         margin: 0px !important; } }
 
-.button, .menu, .infoButton, .play, .pause, .next, .prev, .news, .settings, .date {
+.button, .menu, .info, .play, .pause, .next, .prev, .news, .settings, .date, .timelineContainer {
   width: 3rem;
   height: 3rem;
   border-radius: 1.5rem;
@@ -309,13 +341,13 @@ input[type='radio'] {
   border: none;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,  border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out; }
-  .button:hover, .menu:hover, .infoButton:hover, .play:hover, .pause:hover, .next:hover, .prev:hover, .news:hover, .settings:hover, .date:hover {
+  .button:hover, .menu:hover, .info:hover, .play:hover, .pause:hover, .next:hover, .prev:hover, .news:hover, .settings:hover, .date:hover, .timelineContainer:hover {
     opacity: 1;
     text-decoration: none; }
-  .button:focus .button:active, .menu:focus .button:active, .infoButton:focus .button:active, .play:focus .button:active, .pause:focus .button:active, .next:focus .button:active, .prev:focus .button:active, .news:focus .button:active, .settings:focus .button:active, .date:focus .button:active, .button:focus .menu:active, .menu:focus .menu:active, .infoButton:focus .menu:active, .play:focus .menu:active, .pause:focus .menu:active, .next:focus .menu:active, .prev:focus .menu:active, .news:focus .menu:active, .settings:focus .menu:active, .date:focus .menu:active, .button:focus .infoButton:active, .menu:focus .infoButton:active, .infoButton:focus .infoButton:active, .play:focus .infoButton:active, .pause:focus .infoButton:active, .next:focus .infoButton:active, .prev:focus .infoButton:active, .news:focus .infoButton:active, .settings:focus .infoButton:active, .date:focus .infoButton:active, .button:focus .play:active, .menu:focus .play:active, .infoButton:focus .play:active, .play:focus .play:active, .pause:focus .play:active, .next:focus .play:active, .prev:focus .play:active, .news:focus .play:active, .settings:focus .play:active, .date:focus .play:active, .button:focus .pause:active, .menu:focus .pause:active, .infoButton:focus .pause:active, .play:focus .pause:active, .pause:focus .pause:active, .next:focus .pause:active, .prev:focus .pause:active, .news:focus .pause:active, .settings:focus .pause:active, .date:focus .pause:active, .button:focus .next:active, .menu:focus .next:active, .infoButton:focus .next:active, .play:focus .next:active, .pause:focus .next:active, .next:focus .next:active, .prev:focus .next:active, .news:focus .next:active, .settings:focus .next:active, .date:focus .next:active, .button:focus .prev:active, .menu:focus .prev:active, .infoButton:focus .prev:active, .play:focus .prev:active, .pause:focus .prev:active, .next:focus .prev:active, .prev:focus .prev:active, .news:focus .prev:active, .settings:focus .prev:active, .date:focus .prev:active, .button:focus .news:active, .menu:focus .news:active, .infoButton:focus .news:active, .play:focus .news:active, .pause:focus .news:active, .next:focus .news:active, .prev:focus .news:active, .news:focus .news:active, .settings:focus .news:active, .date:focus .news:active, .button:focus .settings:active, .menu:focus .settings:active, .infoButton:focus .settings:active, .play:focus .settings:active, .pause:focus .settings:active, .next:focus .settings:active, .prev:focus .settings:active, .news:focus .settings:active, .settings:focus .settings:active, .date:focus .settings:active, .button:focus .date:active, .menu:focus .date:active, .infoButton:focus .date:active, .play:focus .date:active, .pause:focus .date:active, .next:focus .date:active, .prev:focus .date:active, .news:focus .date:active, .settings:focus .date:active, .date:focus .date:active {
+  .button:focus .button:active, .menu:focus .button:active, .info:focus .button:active, .play:focus .button:active, .pause:focus .button:active, .next:focus .button:active, .prev:focus .button:active, .news:focus .button:active, .settings:focus .button:active, .date:focus .button:active, .timelineContainer:focus .button:active, .button:focus .menu:active, .menu:focus .menu:active, .info:focus .menu:active, .play:focus .menu:active, .pause:focus .menu:active, .next:focus .menu:active, .prev:focus .menu:active, .news:focus .menu:active, .settings:focus .menu:active, .date:focus .menu:active, .timelineContainer:focus .menu:active, .button:focus .info:active, .menu:focus .info:active, .info:focus .info:active, .play:focus .info:active, .pause:focus .info:active, .next:focus .info:active, .prev:focus .info:active, .news:focus .info:active, .settings:focus .info:active, .date:focus .info:active, .timelineContainer:focus .info:active, .button:focus .play:active, .menu:focus .play:active, .info:focus .play:active, .play:focus .play:active, .pause:focus .play:active, .next:focus .play:active, .prev:focus .play:active, .news:focus .play:active, .settings:focus .play:active, .date:focus .play:active, .timelineContainer:focus .play:active, .button:focus .pause:active, .menu:focus .pause:active, .info:focus .pause:active, .play:focus .pause:active, .pause:focus .pause:active, .next:focus .pause:active, .prev:focus .pause:active, .news:focus .pause:active, .settings:focus .pause:active, .date:focus .pause:active, .timelineContainer:focus .pause:active, .button:focus .next:active, .menu:focus .next:active, .info:focus .next:active, .play:focus .next:active, .pause:focus .next:active, .next:focus .next:active, .prev:focus .next:active, .news:focus .next:active, .settings:focus .next:active, .date:focus .next:active, .timelineContainer:focus .next:active, .button:focus .prev:active, .menu:focus .prev:active, .info:focus .prev:active, .play:focus .prev:active, .pause:focus .prev:active, .next:focus .prev:active, .prev:focus .prev:active, .news:focus .prev:active, .settings:focus .prev:active, .date:focus .prev:active, .timelineContainer:focus .prev:active, .button:focus .news:active, .menu:focus .news:active, .info:focus .news:active, .play:focus .news:active, .pause:focus .news:active, .next:focus .news:active, .prev:focus .news:active, .news:focus .news:active, .settings:focus .news:active, .date:focus .news:active, .timelineContainer:focus .news:active, .button:focus .settings:active, .menu:focus .settings:active, .info:focus .settings:active, .play:focus .settings:active, .pause:focus .settings:active, .next:focus .settings:active, .prev:focus .settings:active, .news:focus .settings:active, .settings:focus .settings:active, .date:focus .settings:active, .timelineContainer:focus .settings:active, .button:focus .date:active, .menu:focus .date:active, .info:focus .date:active, .play:focus .date:active, .pause:focus .date:active, .next:focus .date:active, .prev:focus .date:active, .news:focus .date:active, .settings:focus .date:active, .date:focus .date:active, .timelineContainer:focus .date:active, .button:focus .timelineContainer:active, .menu:focus .timelineContainer:active, .info:focus .timelineContainer:active, .play:focus .timelineContainer:active, .pause:focus .timelineContainer:active, .next:focus .timelineContainer:active, .prev:focus .timelineContainer:active, .news:focus .timelineContainer:active, .settings:focus .timelineContainer:active, .date:focus .timelineContainer:active, .timelineContainer:focus .timelineContainer:active {
     opacity: 1;
     background-color: #1b3f3f !important; }
-  .button:disabled, .menu:disabled, .infoButton:disabled, .play:disabled, .pause:disabled, .next:disabled, .prev:disabled, .news:disabled, .settings:disabled, .date:disabled {
+  .button:disabled, .menu:disabled, .info:disabled, .play:disabled, .pause:disabled, .next:disabled, .prev:disabled, .news:disabled, .settings:disabled, .date:disabled, .timelineContainer:disabled {
     opacity: 0.65;
     pointer-events: none; }
 
@@ -335,10 +367,10 @@ input[type='radio'] {
   align-items: center;
   margin: 10px; }
 
-.infoButton, .play, .pause, .next, .prev, .news, .settings {
+.info, .play, .pause, .next, .prev, .news, .settings {
   font-size: 3rem; }
 
-.infoButton i, .play i, .pause i, .news i, .settings i {
+.info i, .play i, .pause i, .news i, .settings i {
   font-size: 1.3rem !important; }
 
 .play i {
@@ -358,7 +390,14 @@ input[type='radio'] {
   width: 100px !important;
   padding: 0px !important; }
   .date:hover {
-    background-color: #63b7af !important; }
+    opacity: 0.85 !important; }
+
+.timelineContainer {
+  display: flex;
+  justify-content: center;
+  cursor: default !important;
+  width: 250px !important;
+  padding: 0px !important; }
 
 .timeline {
   -webkit-appearance: none;
@@ -373,7 +412,7 @@ input[type='radio'] {
   -webkit-transition: .2s;
   transition: opacity .2s;
   position: relative;
-  top: 2px;
+  top: 5px;
   cursor: pointer; }
   .timeline:hover {
     opacity: 1; }
@@ -386,7 +425,7 @@ input[type='radio'] {
     border-radius: 3px;
     position: relative;
     bottom: 7px;
-    background: #63b7af;
+    background: #ee8572;
     cursor: pointer; }
   .timeline::-moz-range-thumb {
     width: 5px;

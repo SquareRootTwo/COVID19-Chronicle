@@ -5,9 +5,12 @@ let lastDay;
 const playButton = document.querySelector('#playButton');
 const nextDay = document.querySelector('#nextButton');
 const prevDay = document.querySelector('#prevButton');
-const infobar = document.querySelector('#infobar');
-const infobarButton = document.querySelector('#infobarButton');
+const newsfeed = document.querySelector('#newsfeedId');
+const newsfeedButton = document.querySelector('#newsfeedButton');
 const settingsButton = document.querySelector('#settingsButton');
+const infoButton = document.querySelector('#infoButton');
+const settingsMenuContent = document.querySelector('#settingsMenuId');
+const infoMenuContent = document.querySelector('#infoMenuId');
 
 const changeButton = (type) => {
   playButton.innerHTML = "";
@@ -65,9 +68,9 @@ function stopAnimation() {
   playButton.dataset['mode'] = 'pause';
 }
 
-function menuControl() {
-  infobar.classList.toggle('toggled');
-};
+function newsMenuControl() {
+  newsfeed.classList.toggle('toggled');
+}
 
 function keyAction(event) {
   let keyID = event.which;
@@ -80,7 +83,7 @@ function keyAction(event) {
   } else if (keyID == 27) {
     decreaseDay(currentDay);
   } else if (keyID == 73) {
-    menuControl();
+    newsMenuControl();
   }
 }
 
@@ -110,16 +113,28 @@ function getPosition(el) {
   };
 }
 
+function toggleInfoMenu() {
+  updateInfoMenuPosition();
+  infoMenuContent.classList.toggle('toggled');
+}
+
+function updateInfoMenuPosition() {
+  let {x, y} = getPosition(infoButton);
+
+  let infoMenuContent = document.querySelector('#infoMenuId');
+  infoMenuContent.style.left = (x + 40) + "px";
+  infoMenuContent.style.top = (y - 160) + "px";
+}
+
 function toggleSettingsMenu() {
-  updateMenuPosition();
+  updateSettingsMenuPosition();
   settingsMenuContent.classList.toggle('toggled');
 }
 
-function updateMenuPosition() {
+function updateSettingsMenuPosition() {
   let {x, y} = getPosition(settingsButton);
 
-  let settingsMenuContent = document.querySelector('#settingsMenuContent');
-  settingsMenuContent.style.left = (x - 60) + "px";
+  settingsMenuContent.style.left = (x - 100) + "px";
   settingsMenuContent.style.top = (y - 160) + "px";
 }
 
@@ -142,12 +157,14 @@ function printDate() {
 
 window.onload = () => {
   playButton.addEventListener('click', animationControl);
-  infobarButton.addEventListener('click', menuControl);
+  newsfeedButton.addEventListener('click', newsMenuControl);
   settingsButton.addEventListener('click', toggleSettingsMenu);
+  infoButton.addEventListener('click', toggleInfoMenu);
   nextButton.addEventListener('click', function(){increaseDay(1);});
   prevButton.addEventListener('click', function(){decreaseDay(1);});
   document.addEventListener('keydown', keyAction);
-  window.addEventListener('resize', updateMenuPosition);
+  window.addEventListener('resize', updateInfoMenuPosition);
+  window.addEventListener('resize', updateSettingsMenuPosition);
 
   let radioButtons = document.querySelectorAll(".radioButton");
   for(let rb of radioButtons) {
