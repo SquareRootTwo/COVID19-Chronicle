@@ -1,6 +1,6 @@
 var mapData = d3.map();
 
-const THRESHOLD_POPUP = 50;
+const THRESHOLD_POPUP = 300;
 
 let drag = false;
 
@@ -85,11 +85,10 @@ function getPopUpPosX (mouseX) {
     let x;
     
     if (Math.abs(w - mouseX) < THRESHOLD_POPUP) {
-        x = (mouseX - 300) + 'px';
+        x = (mouseX - 250) + 'px';
     } else {
         x = mouseX + 'px';
     }
-    console.log(x);
     return x;
 }
 
@@ -97,7 +96,7 @@ function getPopUpPosY (mouseY) {
     let h = window.innerHeight;
     let y;
     if (Math.abs(h - mouseY) < THRESHOLD_POPUP) {
-        y = (mouseY - 300) + 'px';
+        y = (mouseY - 250) + 'px';
     } else {
         y = mouseY + 'px';
     }
@@ -138,6 +137,12 @@ function clearPopUp (d) {
         .classed("popUp", false);
 }
 
+d3.selection.prototype.moveToFront = function() {  
+    return this.each(function(){
+      this.parentNode.appendChild(this);
+    });
+  };
+
 function initMap() {
     d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson", function ready(error, topo) {  
         svg.selectAll("path")
@@ -146,6 +151,9 @@ function initMap() {
                 .attr("d", path)
                 .classed("country",true)
                 .on("mouseup", popUpOpen)
+                .on('mouseover', function(d) {
+                    d3.select(this).moveToFront();
+                })
         
         updateDay();
         redraw();       // update path data
