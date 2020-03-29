@@ -1,5 +1,6 @@
 var mapData = d3.map();
 let currentPopupCountry;
+let currentSetting = 'ci';
 
 const THRESHOLD_POPUP = 400;
 
@@ -8,27 +9,73 @@ let drag = false;
 document.addEventListener('mousedown', () => drag = false);
 document.addEventListener('mousemove', () => drag = true);
 
-const getColor = (cases) => {
-    if (cases > 100000) {
-        return "#9E2A2A";
-    } else if (cases > 50000) {
-        return "#C14040";
-    } else if (cases > 10000) {
-        return "#F55050";
-    } else if (cases > 5000) {
-        return "#F57150";
-    } else if (cases > 2500) {
-        return "#F59450";
-    } else if (cases > 1000) {
-        return "#F5A850";
-    } else if (cases > 500) {
-        return "#F5BE50";
-    } else if (cases > 250) {
-        return "#F5CB50";
-    } else if (cases > 100) {
-        return "#F5DF50";
+function getColor(cases) {
+    if(currentSetting == 'ci') {
+        if (cases > 100000) {
+            return "#9E2A2A";
+        } else if (cases > 50000) {
+            return "#C14040";
+        } else if (cases > 10000) {
+            return "#F55050";
+        } else if (cases > 5000) {
+            return "#F57150";
+        } else if (cases > 2500) {
+            return "#F59450";
+        } else if (cases > 1000) {
+            return "#F5A850";
+        } else if (cases > 500) {
+            return "#F5BE50";
+        } else if (cases > 250) {
+            return "#F5CB50";
+        } else if (cases > 100) {
+            return "#F5DF50";
+        } else {
+            return "#E7E7E7"
+        }
+    } else if(currentSetting == 'ti') {
+        if (cases > 10000) {
+            return "#9E2A2A";
+        } else if (cases > 5000) {
+            return "#C14040";
+        } else if (cases > 1000) {
+            return "#F55050";
+        } else if (cases > 500) {
+            return "#F57150";
+        } else if (cases > 250) {
+            return "#F59450";
+        } else if (cases > 100) {
+            return "#F5A850";
+        } else if (cases > 50) {
+            return "#F5BE50";
+        } else if (cases > 25) {
+            return "#F5CB50";
+        } else if (cases > 10) {
+            return "#F5DF50";
+        } else {
+            return "#E7E7E7"
+        }
     } else {
-        return "#E7E7E7"
+        if (cases > 10000) {
+            return "#9E2A2A";
+        } else if (cases > 0.01) {
+            return "#C14040";
+        } else if (cases > 0.005) {
+            return "#F55050";
+        } else if (cases > 0.001) {
+            return "#F57150";
+        } else if (cases > 0.0005) {
+            return "#F59450";
+        } else if (cases > 0.0001) {
+            return "#F5A850";
+        } else if (cases > 0.00005) {
+            return "#F5BE50";
+        } else if (cases > 0.00001) {
+            return "#F5CB50";
+        } else if (cases > 0.000001) {
+            return "#F5DF50";
+        } else {
+            return "#E7E7E7"
+        }
     }
 }
 
@@ -196,7 +243,12 @@ function updateDay() {
 
     //update individual countries
     csvData.forEach(function(entry) {
-        mapData.set(entry.id, entry[currentDay+'_ci']);
+        if(currentSetting == 'ibp') {
+            let ratio =  entry[currentDay+'_ci'] / entry['population'];
+            mapData.set(entry.id, ratio);
+        } else {
+            mapData.set(entry.id, entry[currentDay+'_'+currentSetting]);
+        }
     });
     svg.selectAll("path").transition()
         .style("fill", function (d){
