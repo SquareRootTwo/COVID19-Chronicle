@@ -166,7 +166,7 @@ function updateDay() {
 
     //update individual countries
     csvData.forEach(function(entry) {
-        mapData.set(entry.id, entry[currentDay+'_i']);
+        mapData.set(entry.id, entry[currentDay+'_ci']);
     });
     svg.selectAll("path").transition()
         .style("fill", function (d){
