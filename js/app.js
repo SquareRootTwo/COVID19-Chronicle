@@ -149,3 +149,16 @@ window.onload = () => {
   document.addEventListener('keydown', keyAction);
   window.addEventListener('resize', updateMenuPosition);
 };
+
+function newsOfCurrentDay() {
+  let divText = "";
+  for(let article of articleData['day_'+currentDay]) {
+    divText += "<a target='_blank' href='"+article.url+"' class='boxText headline'>"+article.headline+"</a><br><hr>";
+  }
+  return divText;
+}
+
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+
