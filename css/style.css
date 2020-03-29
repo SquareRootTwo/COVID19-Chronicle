@@ -201,7 +201,10 @@ input[type='radio'] {
   top: 10vh;
   height: 80vh;
   width: 15rem;
+  -ms-overflow-style: none;
   border-radius: 15px; }
+  .newsfeed::-webkit-scrollbar {
+    display: none; }
   .newsfeed h1 {
     text-align: center;
     font-weight: bold; }
@@ -270,8 +273,9 @@ input[type='radio'] {
   background-color: #63b7af;
   opacity: 0.95;
   border-radius: 15px;
-  min-width: 220px;
-  height: 129px;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
   padding-top: 10px;
   padding-bottom: 10px;
   -webkit-transition: right .25s ease-out;
@@ -283,15 +287,18 @@ input[type='radio'] {
   -ms-user-select: none;
   user-select: none; }
   .infoMenu a {
-    cursor: pointer; }
+    cursor: pointer;
+    color: white; }
   .infoMenu a:hover {
     opacity: 1; }
 
 .infoMenuContent {
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
-  padding: 20px; }
+  margin: 20px; }
 
 .toggled {
   display: flex;

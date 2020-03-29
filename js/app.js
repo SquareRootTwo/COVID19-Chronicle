@@ -122,8 +122,8 @@ function updateInfoMenuPosition() {
   let {x, y} = getPosition(infoButton);
 
   let infoMenuContent = document.querySelector('#infoMenuId');
-  infoMenuContent.style.left = (x + 40) + "px";
-  infoMenuContent.style.top = (y - 160) + "px";
+  infoMenuContent.style.left = (x - 200) + "px";
+  infoMenuContent.style.top = (y - 360) + "px";
 }
 
 function toggleSettingsMenu() {
@@ -134,7 +134,7 @@ function toggleSettingsMenu() {
 function updateSettingsMenuPosition() {
   let {x, y} = getPosition(settingsButton);
 
-  settingsMenuContent.style.left = (x - 100) + "px";
+  settingsMenuContent.style.left = (x - 340) + "px";
   settingsMenuContent.style.top = (y - 160) + "px";
 }
 

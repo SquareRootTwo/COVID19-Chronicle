@@ -281,6 +281,12 @@ input[type='radio'] {
   height: 80vh;
   width: 15rem;
 
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   & h1 {
     text-align: center;
     font-weight: bold;
@@ -382,9 +388,11 @@ input[type='radio'] {
   background-color: $BUTTON_COLOR;
   opacity: 0.95;
   border-radius: 15px;
-  min-width: 220px;
-  height: 129px;
+  width: 300px;
+  height: auto;
 
+  overflow: hidden;
+  
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -400,6 +408,7 @@ input[type='radio'] {
 
   & a {
     cursor: pointer;
+    color: white;
   }
 
   & a:hover {
@@ -409,9 +418,11 @@ input[type='radio'] {
 
 .infoMenuContent {
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
-  padding: 20px;
+  margin: 20px;
 }
 
 
