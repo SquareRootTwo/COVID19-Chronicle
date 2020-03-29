@@ -21,17 +21,17 @@
       <div class="score">
         <div class="confirmed">
           <div class="titleScore">Total Confirmed:</div>
-          <div id="numbersScore">0</div>
+          <div class="numbersScore" id="numbersTotalScore">0</div>
         </div>
         <div class="vline"></div>
         <div class="deaths">
           <div class="titleScore">Total Deaths:</div>
-          <div id="numbersScore">0</div>
+          <div class="numbersScore" id="numbersTotalDeaths">0</div>
         </div>
         <div class="vline"></div>
         <div class="recovered">
           <div class="titleScore">Total Recovered:</div>
-          <div id="numbersScore">0</div>
+          <div class="numbersScore" id="numbersTotalRecovered">0</div>
         </div>
       </div>
     </div>
@@ -84,12 +84,12 @@
     </div>
     
     <div class="settingsMenu" id="settingsMenuContent">
-      <form id="settingSelection">
-        <input type="radio" id="ci" name="setting">
+      <form class="settingsInput" id="settingSelection">
+        <input type="radio" checked="checked" id="ci">
         <label>Currently Infected</label><br>
-        <input type="radio" id="ni" name="setting">
+        <input type="radio" id="ni">
         <label>New Infections</label><br>
-        <input type="radio" id="ip" name="setting">
+        <input type="radio" id="ip">
         <label>Infected by Population</label><br>
       </form> 
     </div>
