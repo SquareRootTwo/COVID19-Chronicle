@@ -198,7 +198,7 @@ hr {
   opacity: 0.95;
   border-radius: 15px;
   min-width: 120px;
-  height: auto;
+  height: 129px;
 
   padding-top: 10px;
   padding-bottom: 10px;
@@ -255,7 +255,7 @@ input[type='radio'] {
 
 // —————————————————————————   News   ————————————————————————— //
 
-.info {
+.newsfeed {
   -webkit-transition: right .25s ease-out;
   -moz-transition: right .25s ease-out;
   -o-transition: right .25s ease-out;
@@ -291,16 +291,6 @@ input[type='radio'] {
     text-align: center;
     font-size: 0.8rem;
   }
-
-  -ms-overflow-style: none;
-
-  & * {
-    -ms-overflow-style: none;
-  }
-  
-  &::-webkit-scrollbar {
-    display: none;
-  }
   
   border-radius: 15px;
 
@@ -330,15 +320,6 @@ input[type='radio'] {
       top: -18rem;
     }
   }
-}
-
-.newsBoxTile {
-  
-
-}
-
-.newsBoxSubtitle {
-
 }
 
 .menu {
@@ -388,6 +369,59 @@ input[type='radio'] {
     -ms-overflow-style: none;
   }
 }
+
+// —————————————————————————   Info   ————————————————————————— //
+
+.infoMenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+
+  box-shadow: 10px 10px 25px 0px $MATCH_2;
+
+  background-color: $BUTTON_COLOR;
+  opacity: 0.95;
+  border-radius: 15px;
+  min-width: 220px;
+  height: 129px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  -webkit-transition: right .25s ease-out;
+  -moz-transition: right .25s ease-out;
+  -o-transition: right .25s ease-out;
+  transition: right .25s ease-out;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  & a {
+    cursor: pointer;
+  }
+
+  & a:hover {
+    opacity: 1;
+  }
+}
+
+.infoMenuContent {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.toggled { 
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+}
+
 
 // —————————————————————————   Controls   ————————————————————————— //
 
@@ -482,12 +516,12 @@ input[type='radio'] {
   margin: 10px;
 }
 
-.infoButton, .play, .pause, .next, .prev, .news, .settings {
+.info, .play, .pause, .next, .prev, .news, .settings {
   @extend .button;
   font-size: 3rem;
 }
 
-.infoButton, .play , .pause, .news, .settings{
+.info, .play , .pause, .news, .settings{
   & i {
     font-size: 1.3rem !important;
   }
@@ -521,8 +555,18 @@ input[type='radio'] {
   padding: 0px !important;
 
   &:hover {
-    background-color: $BUTTON_COLOR !important;
+    opacity: 0.85 !important;
   }
+}
+
+.timelineContainer {
+  @extend .button;
+  
+  display: flex;
+  justify-content: center;
+  cursor: default !important;
+  width: 250px !important;
+  padding: 0px !important;
 }
 
 .timeline {
@@ -538,7 +582,7 @@ input[type='radio'] {
   -webkit-transition: .2s;
   transition: opacity .2s;
   position: relative;
-  top: 2px;
+  top: 5px;
   cursor: pointer;
 
   &:hover {
@@ -554,7 +598,7 @@ input[type='radio'] {
     border-radius: 3px;
     position: relative;
     bottom: 7px;
-    background: $BUTTON_COLOR;
+    background: $MATCH_1;
     cursor: pointer; 
   }
   

@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <div class="info toggled" id="infobar">
+    <div class="newsfeed scrollbar style-3 toggled" id="newsfeedId">
       <!-- <div class="button-container">
         <a class="menu" id="">
           
@@ -58,7 +58,7 @@
           <i class="fas fa-chevron-right"></i>
         </a>
       </div>
-      <div class="">
+      <div class="timelineContainer">
         <input class="timeline" type="range" id="slider" name="vol" min="0" onchange="updateSlider(this.value)">
       </div>
       <div class="controlRight">
@@ -67,16 +67,16 @@
         <a class="settings" id="settingsButton">
           <i class="fas fa-sliders-h"></i>
         </a>
-        <a class="news">
-          <i class="far fa-newspaper"></i>
+        <a class="news" id="newsfeedButton">
+          <i class="fas fa-newspaper"></i>
         </a>
-        <a class="infoButton" id="infobarButton">
+        <a class="info" id="infoButton">
           <i class="fas fa-info"></i>
         </a>  
       </div>
     </div>
     
-    <div class="settingsMenu" id="settingsMenuContent">
+    <div class="settingsMenu" id="settingsMenuId">
       <form id="settingSelection">
         <div class="settingsInput">
           <input type="radio" class="radioButton" checked="checked" id="ci" name="settings">
@@ -94,6 +94,15 @@
         </div>
       </form> 
     </div>
+
+    <div class="infoMenu" id="infoMenuId">
+      <div class="infoMenuContent">
+        
+      </div>
+    </div>
+
+
+    
 
     <script src="js/app.js"></script>
     <script src="js/map.js"></script>
