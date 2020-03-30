@@ -5,7 +5,7 @@
 Check out a live version [here](https://squareroottwo.github.io/COVID19-Chronicle/).<br><br>
 The COVID-19 pandemic will go down in history. Graphics of the spread can thus fulfill an important purpose: During the crisis, visualizations help us understand the extent of the pandemic. And in hindsight, they serve as a powerful historic reminder.
 <br><br>
-Most of the COVID-19 maps published by media companies and researche institutes focus on the current situation. However, we believe that in order to understand this pandemic, additional context is necessary. 
+Most of the COVID-19 maps published by media companies and research institutes focus on the current situation. However, we believe that in order to understand this pandemic, additional context is necessary. 
 COVID Chronicles visualizes the spread of the virus over time and sets these numbers into perspective by providing newspaper articles for each day. This representation provides a more detailed and more understandable overview than raw numbers or existing maps would.
 <br><br>
 The data is provided by John Hopkins CSSE and can be [found on Github](https://github.com/CSSEGISandData/COVID-19). It is updated daily.
