@@ -6,6 +6,7 @@ d3.csv("https://raw.githubusercontent.com/SquareRootTwo/COVID19-Chronicle/master
     csvData = data;
     lastDay = ((Object.keys(csvData[0]).length - 3) / 7) - 1;
     document.getElementById("slider").max = lastDay;
+    currentDay = lastDay;
     initMap();
 });
 
