@@ -119,11 +119,14 @@ function toggleInfoMenu() {
 }
 
 function updateInfoMenuPosition() {
-  let {x, y} = getPosition(infoButton);
+  const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  let x = vw / 2;
+  let y = vh / 2;
 
   let infoMenuContent = document.querySelector('#infoMenuId');
-  infoMenuContent.style.left = (x - 200) + "px";
-  infoMenuContent.style.top = (y - 360) + "px";
+  infoMenuContent.style.left = (x - 150) + "px";
+  infoMenuContent.style.top = (y - 150) + "px";
 }
 
 function toggleSettingsMenu() {
@@ -134,7 +137,7 @@ function toggleSettingsMenu() {
 function updateSettingsMenuPosition() {
   let {x, y} = getPosition(settingsButton);
 
-  settingsMenuContent.style.left = (x - 340) + "px";
+  settingsMenuContent.style.left = (x - 90) + "px";
   settingsMenuContent.style.top = (y - 160) + "px";
 }
 

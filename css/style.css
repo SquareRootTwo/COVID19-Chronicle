@@ -274,7 +274,7 @@ input[type='radio'] {
   opacity: 0.95;
   border-radius: 15px;
   width: 300px;
-  height: auto;
+  height: 300px;
   overflow: hidden;
   padding-top: 10px;
   padding-bottom: 10px;
